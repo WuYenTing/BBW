@@ -7,10 +7,10 @@
 #define grid_width 40
 #define grid_height 40
 
-#define window_width 2000
-#define window_height 1500
-#define field_width 600
-#define field_height 600
+#define window_width 2350
+#define window_height 1480 
+#define field_width 2350
+#define field_height 15
 
 #define Num_TowerType 5
 #define Num_MonsterType 4

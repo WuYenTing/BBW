@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2E1D5B295E1EA900AF5BDF /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D58295E1EA800AF5BDF /* box.png */; };
+		3E2E1D5C295E1EA900AF5BDF /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D59295E1EA800AF5BDF /* wall.png */; };
+		3E2E1D5D295E1EA900AF5BDF /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D5A295E1EA800AF5BDF /* tree.png */; };
 		3EA41E312957602C0076FCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA41E302957602C0076FCDD /* Assets.xcassets */; };
 		3EA41E342957602D0076FCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA41E322957602D0076FCDD /* Main.storyboard */; };
 		3EA41E672957613E0076FCDD /* liballegro_main.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA41E5A295761390076FCDD /* liballegro_main.5.2.9.dylib */; };
@@ -125,6 +128,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E2E1D58295E1EA800AF5BDF /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = box.png; path = ../../box.png; sourceTree = "<group>"; };
+		3E2E1D59295E1EA800AF5BDF /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall.png; path = ../../wall.png; sourceTree = "<group>"; };
+		3E2E1D5A295E1EA800AF5BDF /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tree.png; path = ../../tree.png; sourceTree = "<group>"; };
 		3EA41E272957602B0076FCDD /* BBW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA41E302957602C0076FCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA41E332957602D0076FCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -269,6 +275,9 @@
 		3EA41E292957602B0076FCDD /* BBW */ = {
 			isa = PBXGroup;
 			children = (
+				3E2E1D58295E1EA800AF5BDF /* box.png */,
+				3E2E1D5A295E1EA800AF5BDF /* tree.png */,
+				3E2E1D59295E1EA800AF5BDF /* wall.png */,
 				3EA41E82295761A80076FCDD /* Arcane.h */,
 				3EA41EBF295761AF0076FCDD /* Archer.h */,
 				3EA41E8A295761A90076FCDD /* Arrow.wav */,
@@ -467,6 +476,7 @@
 				3EA41EC6295761AF0076FCDD /* Arrow.wav in Resources */,
 				3EA41EC3295761AF0076FCDD /* CaveMan in Resources */,
 				3EA41EE7295761AF0076FCDD /* Eagle in Resources */,
+				3E2E1D5B295E1EA900AF5BDF /* box.png in Resources */,
 				3EA41ED5295761AF0076FCDD /* LEVEL2.txt in Resources */,
 				3EA41EC8295761AF0076FCDD /* Bebas.ttf in Resources */,
 				3EA41EE1295761AF0076FCDD /* BlackDragon in Resources */,
@@ -485,6 +495,7 @@
 				3EA41ECC295761AF0076FCDD /* TowerGame.cbp in Resources */,
 				3EA41ED0295761AF0076FCDD /* DemonNijia in Resources */,
 				3EA41EE8295761AF0076FCDD /* map_small.jpg in Resources */,
+				3E2E1D5D295E1EA900AF5BDF /* tree.png in Resources */,
 				3EA41EC1295761AF0076FCDD /* doxygen in Resources */,
 				3EA41EEB295761AF0076FCDD /* Caviar_Dreams_Bold.ttf in Resources */,
 				3EA41EDE295761AF0076FCDD /* WolfKnight in Resources */,
@@ -493,6 +504,7 @@
 				3EA41EE6295761AF0076FCDD /* level_clear.wav in Resources */,
 				3EA41ED7295761AF0076FCDD /* StartBackground.jpg in Resources */,
 				3EA41ED8295761AF0076FCDD /* BackgroundMusic.ogg in Resources */,
+				3E2E1D5C295E1EA900AF5BDF /* wall.png in Resources */,
 				3EA41ED4295761AF0076FCDD /* note.txt in Resources */,
 				3EA41EC9295761AF0076FCDD /* SettingScene in Resources */,
 				3EA41EDF295761AF0076FCDD /* Tower in Resources */,

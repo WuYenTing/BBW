@@ -32,6 +32,9 @@ GameWindow::game_init()
 
     icon = al_load_bitmap("./icon.png");
     background = al_load_bitmap("./StartBackground.jpg");
+    wall = al_load_bitmap("./wall.png");
+    tree = al_load_bitmap("./tree.png");
+    box = al_load_bitmap("./box.png");
 
     for(int i = 0; i < Num_TowerType; i++)
     {
@@ -366,6 +369,9 @@ GameWindow::game_destroy()
 
     al_destroy_bitmap(icon);
     al_destroy_bitmap(background);
+    al_destroy_bitmap(wall);
+    al_destroy_bitmap(tree);
+    al_destroy_bitmap(box);
 
     al_destroy_sample(sample);
     al_destroy_sample_instance(startSound);
@@ -511,6 +517,10 @@ GameWindow::draw_running_map()
 
     al_clear_to_color(al_map_rgb(100, 100, 100));
     al_draw_bitmap(background, 0, 0, 0);
+    al_draw_bitmap(wall, 100, 100, 0);
+    al_draw_bitmap(tree, 110, 110, 0);
+    al_draw_bitmap(box, 500, 500, 0);
+    
 
     for(i = 0; i < field_height/40; i++)
     {

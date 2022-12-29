@@ -77,6 +77,9 @@ private:
     ALLEGRO_BITMAP *icon;
     ALLEGRO_BITMAP *tower[Num_TowerType];
     ALLEGRO_BITMAP *background = NULL;
+    ALLEGRO_BITMAP *tree= NULL;
+    ALLEGRO_BITMAP *wall= NULL;
+    ALLEGRO_BITMAP *box= NULL;
 
     ALLEGRO_DISPLAY* display = NULL;
     ALLEGRO_FONT *font = NULL;
