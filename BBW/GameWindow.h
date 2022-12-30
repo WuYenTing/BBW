@@ -8,15 +8,10 @@
 #include <time.h>
 #include "Menu.h"
 #include "Level.h"
-#include "WolfKnight.h"
-#include "CaveMan.h"
 #include "Wolf.h"
-#include "DemonNijia.h"
-#include "Arcane.h"
-#include "Archer.h"
-#include "Canon.h"
-#include "Poison.h"
-#include "Storm.h"
+
+#include "Tower.h"
+#include "Monster.h"
 #include "Attack.h"
 #include "Slider.h"
 
@@ -65,7 +60,7 @@ public:
     // detect if mouse hovers over a rectangle
     bool mouse_hover(int, int, int, int);
     // detect if a tower will be constructed on road
-    bool isOnRoad();
+
 
     Tower* create_tower(int);
     Monster* create_monster();

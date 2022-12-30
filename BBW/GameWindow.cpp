@@ -24,7 +24,7 @@ bool compare(Tower *t1, Tower *t2)
 {
     return (t1->getY() <= t2->getY());
 }
-
+////////////////////////////////////////
 void
 GameWindow::game_init()
 {
@@ -69,61 +69,13 @@ GameWindow::mouse_hover(int startx, int starty, int width, int height)
     return false;
 }
 
-bool
-GameWindow::isOnRoad()
-{
-    int startx, starty;
-    int widthOfTower;
-
-    widthOfTower = TowerWidth[selectedTower];
-
-    for(int i=0; i < NumOfGrid; i++)
-    {
-        startx = (i % 15) * 40;
-        starty = (i / 15) * 40;
-
-        if(level->isRoad(i)) {
-            if((mouse_x + (widthOfTower/2) < startx) || (mouse_x - (widthOfTower/2) > startx + grid_width))
-                continue;
-            else if((mouse_y + (widthOfTower/2) < starty) || (mouse_y > starty + grid_height))
-                continue;
-            else
-                return true;
-        }
-    }
-    return false;
-}
 
 Tower*
 GameWindow::create_tower(int type)
 {
     Tower *t = NULL;
 
-    if(isOnRoad())
-        return t;
 
-    switch(type)
-    {
-    case ARCANE:
-        t = new Arcane(mouse_x, mouse_y);
-        break;
-    case ARCHER:
-        t = new Archer(mouse_x, mouse_y);
-        break;
-    case CANON:
-        t = new Canon(mouse_x, mouse_y);
-        break;
-    case POISON:
-        t = new Poison(mouse_x, mouse_y);
-        break;
-    case STORM:
-        t = new Storm(mouse_x, mouse_y);
-        break;
-    default:
-        break;
-    }
-
-    menu->Change_Coin(menu->getTowerCoin(type));
 
     return t;
 }
@@ -137,21 +89,6 @@ GameWindow::create_monster()
     {
         level->MonsterNum[WOLF]--;
         m = new Wolf(level->ReturnPath());
-    }
-    else if(level->MonsterNum[WOLFKNIGHT])
-    {
-        level->MonsterNum[WOLFKNIGHT]--;
-        m = new WolfKnight(level->ReturnPath());
-    }
-    else if(level->MonsterNum[DEMONNIJIA])
-    {
-        level->MonsterNum[DEMONNIJIA]--;
-        m = new DemonNijia(level->ReturnPath());
-    }
-    else if(level->MonsterNum[CAVEMAN])
-    {
-        level->MonsterNum[CAVEMAN]--;
-        m = new CaveMan(level->ReturnPath());
     }
     else
     {
@@ -521,19 +458,6 @@ GameWindow::draw_running_map()
     al_draw_bitmap(tree, 110, 110, 0);
     al_draw_bitmap(box, 500, 500, 0);
     
-
-    for(i = 0; i < field_height/40; i++)
-    {
-        for(j = 0; j < field_width/40; j++)
-        {
-            char buffer[50];
-            sprintf(buffer, "%d", i*15 + j);
-            if(level->isRoad(i*15 + j)) {
-                al_draw_filled_rectangle(j*40, i*40, j*40+40, i*40+40, al_map_rgb(255, 244, 173));
-            }
-            //al_draw_text(font, al_map_rgb(0, 0, 0), j*40, i*40, ALLEGRO_ALIGN_CENTER, buffer);
-        }
-    }
     for(i=0; i<monsterSet.size(); i++)
     {
         monsterSet[i]->Draw();
