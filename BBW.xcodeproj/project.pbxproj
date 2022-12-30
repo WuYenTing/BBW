@@ -10,6 +10,7 @@
 		3E2E1D61295E211700AF5BDF /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D5E295E211700AF5BDF /* tree.png */; };
 		3E2E1D62295E211700AF5BDF /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D5F295E211700AF5BDF /* wall.png */; };
 		3E2E1D63295E211700AF5BDF /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2E1D60295E211700AF5BDF /* box.png */; };
+		3E2E1D65295F129400AF5BDF /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 3E2E1D64295F129400AF5BDF /* makefile */; };
 		3EA41E312957602C0076FCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA41E302957602C0076FCDD /* Assets.xcassets */; };
 		3EA41E342957602D0076FCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA41E322957602D0076FCDD /* Main.storyboard */; };
 		3EA41E672957613E0076FCDD /* liballegro_main.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA41E5A295761390076FCDD /* liballegro_main.5.2.9.dylib */; };
@@ -131,6 +132,7 @@
 		3E2E1D5E295E211700AF5BDF /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		3E2E1D5F295E211700AF5BDF /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		3E2E1D60295E211700AF5BDF /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		3E2E1D64295F129400AF5BDF /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		3EA41E272957602B0076FCDD /* BBW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA41E302957602C0076FCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA41E332957602D0076FCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		3EA41E292957602B0076FCDD /* BBW */ = {
 			isa = PBXGroup;
 			children = (
+				3E2E1D64295F129400AF5BDF /* makefile */,
 				3E2E1D60295E211700AF5BDF /* box.png */,
 				3E2E1D5E295E211700AF5BDF /* tree.png */,
 				3E2E1D5F295E211700AF5BDF /* wall.png */,
@@ -536,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EA41EDC295761AF0076FCDD /* Circle.cpp in Sources */,
+				3E2E1D65295F129400AF5BDF /* makefile in Sources */,
 				3EA41ECF295761AF0076FCDD /* global.cpp in Sources */,
 				3EA41ECE295761AF0076FCDD /* Tower.cpp in Sources */,
 				3EA41ECD295761AF0076FCDD /* Level.cpp in Sources */,
