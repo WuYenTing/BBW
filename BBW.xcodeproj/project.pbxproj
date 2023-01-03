@@ -49,9 +49,13 @@
 		3E897FF129648C4800AEBABF /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FE029648C4700AEBABF /* explosion.png */; };
 		3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE129648C4700AEBABF /* Gamewindow.cpp */; };
 		3E897FF329648C4800AEBABF /* Scence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE529648C4800AEBABF /* Scence.cpp */; };
-		4B699C6C296495D400BE51DE /* Mode_classic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B699C68296495D400BE51DE /* Mode_classic.cpp */; };
-		4B699C6D296495D400BE51DE /* Mode_deathmatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B699C69296495D400BE51DE /* Mode_deathmatch.cpp */; };
-		4B699C6E296495D400BE51DE /* Mode_capture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B699C6B296495D400BE51DE /* Mode_capture.cpp */; };
+		3E89800D296497B700AEBABF /* bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898005296497B600AEBABF /* bitmap.cpp */; };
+		3E89800E296497B700AEBABF /* Mode_classic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898006296497B600AEBABF /* Mode_classic.cpp */; };
+		3E89800F296497B700AEBABF /* Mode_capture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898007296497B600AEBABF /* Mode_capture.cpp */; };
+		3E898010296497B700AEBABF /* gif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898008296497B600AEBABF /* gif.cpp */; };
+		3E898011296497B700AEBABF /* lzw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898009296497B600AEBABF /* lzw.cpp */; };
+		3E898012296497B700AEBABF /* Mode_deathmatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */; };
+		3E898013296497B700AEBABF /* algif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E89800B296497B700AEBABF /* algif.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +153,14 @@
 		3E897FE329648C4700AEBABF /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		3E897FE429648C4800AEBABF /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		3E897FE529648C4800AEBABF /* Scence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scence.cpp; sourceTree = "<group>"; };
-		4B699C68296495D400BE51DE /* Mode_classic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mode_classic.cpp; path = ../../../Desktop/Mode_classic.cpp; sourceTree = "<group>"; };
-		4B699C69296495D400BE51DE /* Mode_deathmatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mode_deathmatch.cpp; path = ../../../Desktop/Mode_deathmatch.cpp; sourceTree = "<group>"; };
-		4B699C6A296495D400BE51DE /* Mode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mode.h; path = ../../../Desktop/Mode.h; sourceTree = "<group>"; };
-		4B699C6B296495D400BE51DE /* Mode_capture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mode_capture.cpp; path = ../../../Desktop/Mode_capture.cpp; sourceTree = "<group>"; };
+		3E898005296497B600AEBABF /* bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmap.cpp; sourceTree = "<group>"; };
+		3E898006296497B600AEBABF /* Mode_classic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mode_classic.cpp; sourceTree = "<group>"; };
+		3E898007296497B600AEBABF /* Mode_capture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mode_capture.cpp; sourceTree = "<group>"; };
+		3E898008296497B600AEBABF /* gif.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gif.cpp; sourceTree = "<group>"; };
+		3E898009296497B600AEBABF /* lzw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lzw.cpp; sourceTree = "<group>"; };
+		3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mode_deathmatch.cpp; sourceTree = "<group>"; };
+		3E89800B296497B700AEBABF /* algif.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = algif.cpp; sourceTree = "<group>"; };
+		3E89800C296497B700AEBABF /* algif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algif.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +223,14 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
-				4B699C6B296495D400BE51DE /* Mode_capture.cpp */,
-				4B699C68296495D400BE51DE /* Mode_classic.cpp */,
-				4B699C69296495D400BE51DE /* Mode_deathmatch.cpp */,
-				4B699C6A296495D400BE51DE /* Mode.h */,
+				3E898008296497B600AEBABF /* gif.cpp */,
+				3E898009296497B600AEBABF /* lzw.cpp */,
+				3E898007296497B600AEBABF /* Mode_capture.cpp */,
+				3E89800B296497B700AEBABF /* algif.cpp */,
+				3E89800C296497B700AEBABF /* algif.h */,
+				3E898005296497B600AEBABF /* bitmap.cpp */,
+				3E898006296497B600AEBABF /* Mode_classic.cpp */,
+				3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */,
 				3E897FD429648C4100AEBABF /* Boxinggloves.h */,
 				3E897FD129648C3F00AEBABF /* Character.cpp */,
 				3E897FE229648C4700AEBABF /* Character.h */,
@@ -411,16 +423,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E898010296497B700AEBABF /* gif.cpp in Sources */,
 				3E897FEE29648C4800AEBABF /* Player.cpp in Sources */,
 				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
+				3E898012296497B700AEBABF /* Mode_deathmatch.cpp in Sources */,
 				3E897FE729648C4800AEBABF /* global.cpp in Sources */,
-				4B699C6C296495D400BE51DE /* Mode_classic.cpp in Sources */,
-				4B699C6D296495D400BE51DE /* Mode_deathmatch.cpp in Sources */,
-				4B699C6E296495D400BE51DE /* Mode_capture.cpp in Sources */,
+				3E898013296497B700AEBABF /* algif.cpp in Sources */,
 				3E897FE629648C4800AEBABF /* Main.cpp in Sources */,
+				3E89800E296497B700AEBABF /* Mode_classic.cpp in Sources */,
+				3E89800D296497B700AEBABF /* bitmap.cpp in Sources */,
 				3E897FE929648C4800AEBABF /* Menu.cpp in Sources */,
 				3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */,
 				3E897FF329648C4800AEBABF /* Scence.cpp in Sources */,
+				3E89800F296497B700AEBABF /* Mode_capture.cpp in Sources */,
+				3E898011296497B700AEBABF /* lzw.cpp in Sources */,
 				3E897FEB29648C4800AEBABF /* Character.cpp in Sources */,
 				3E897FE829648C4800AEBABF /* Obstacle.cpp in Sources */,
 				3E897FEA29648C4800AEBABF /* Item.cpp in Sources */,
