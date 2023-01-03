@@ -161,6 +161,7 @@
 		3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mode_deathmatch.cpp; sourceTree = "<group>"; };
 		3E89800B296497B700AEBABF /* algif.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = algif.cpp; sourceTree = "<group>"; };
 		3E89800C296497B700AEBABF /* algif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algif.h; sourceTree = "<group>"; };
+		3E8980142964A4FA00AEBABF /* Mode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +267,7 @@
 				3E897F742964883E00AEBABF /* Assets.xcassets */,
 				3E897F762964883E00AEBABF /* Main.storyboard */,
 				3E897F7B2964883E00AEBABF /* BBW.entitlements */,
+				3E8980142964A4FA00AEBABF /* Mode.h */,
 			);
 			path = BBW;
 			sourceTree = "<group>";
