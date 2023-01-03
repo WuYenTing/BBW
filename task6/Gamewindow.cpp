@@ -197,6 +197,10 @@ Gamewindow::draw_running_map()
 int
 Gamewindow::process_event()
 {
+    al_wait_for_event(event_queue, &event);
+    if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
+        return GAME_EXIT;
+    }
     printf("process event\n");
     if(select_mode == CLASSIC)
     {
