@@ -104,17 +104,12 @@ Gamewindow::game_play()
     msg = -1;
     game_reset();
     game_begin();
-    
-    long long int end = 0;
+
     
     printf("game run\n");
     while (msg != GAME_EXIT)
     {
         msg = game_run();
-        if (end == 1000000){
-            break;
-        }
-        end++;
     }
     
     show_err_msg(msg);
@@ -179,18 +174,7 @@ Gamewindow::game_destroy()
 void
 Gamewindow::draw_running_map()
 {
-    if(select_mode == CLASSIC)
-    {
-        
-    }
-    else if(select_mode == CAPTURE)
-    {
-        
-    }
-    else if (select_mode == DEATHMATCH)
-    {
-        
-    }
+    
 }
 
 // process of updated event
@@ -198,9 +182,7 @@ int
 Gamewindow::process_event()
 {
     al_wait_for_event(event_queue, &event);
-    if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
-        return GAME_EXIT;
-    }
+    
     printf("process event\n");
     if(select_mode == CLASSIC)
     {
@@ -214,7 +196,9 @@ Gamewindow::process_event()
     {
         
     }
-    
+    if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
+            return GAME_EXIT;
+    }
     game_update();
     draw_running_map();
     

@@ -27,3 +27,4 @@ public:
     bool initial = true;
 
 };
+#endif // MODE_H_INCLUDED

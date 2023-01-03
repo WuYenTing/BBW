@@ -49,10 +49,10 @@ public:
     void game_destroy();
 
     // each drawing scene function
-    //void draw_running_map();
+    void draw_running_map();
 
     // process of updated event
-    //int process_event();
+    int process_event();
     
     // detect if mouse hovers over a rectangle
     bool mouse_hover(int, int, int, int);
@@ -61,8 +61,8 @@ public:
     Item* create_item(int);
     Player* create_player_1();
     Player* create_player_2();
-    /*Player* create_player_3();
-    Player* create_player_4();*/
+    Player* create_player_3();
+    Player* create_player_4();
 
     ~Gamewindow();
 
