@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E897F752964883E00AEBABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E897F742964883E00AEBABF /* Assets.xcassets */; };
+		3E897F782964883E00AEBABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E897F762964883E00AEBABF /* Main.storyboard */; };
+		3E897FAA29648B5900AEBABF /* liballegro_primitives.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897F9E29648B5400AEBABF /* liballegro_primitives.5.2.9.dylib */; };
+		3E897FAB29648B5A00AEBABF /* liballegro_primitives.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897F9E29648B5400AEBABF /* liballegro_primitives.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FAC29648B5A00AEBABF /* liballegro_video.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897F9F29648B5400AEBABF /* liballegro_video.5.2.9.dylib */; };
+		3E897FAD29648B5A00AEBABF /* liballegro_video.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897F9F29648B5400AEBABF /* liballegro_video.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FAE29648B5A00AEBABF /* liballegro_image.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA029648B5500AEBABF /* liballegro_image.5.2.9.dylib */; };
+		3E897FAF29648B5A00AEBABF /* liballegro_image.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA029648B5500AEBABF /* liballegro_image.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FB029648B5A00AEBABF /* liballegro_main.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA129648B5500AEBABF /* liballegro_main.5.2.9.dylib */; };
+		3E897FB129648B5B00AEBABF /* liballegro_main.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA129648B5500AEBABF /* liballegro_main.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FB229648B5B00AEBABF /* liballegro_color.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA229648B5600AEBABF /* liballegro_color.5.2.9.dylib */; };
+		3E897FB329648B5B00AEBABF /* liballegro_color.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA229648B5600AEBABF /* liballegro_color.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FB429648B5C00AEBABF /* liballegro_ttf.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA329648B5600AEBABF /* liballegro_ttf.5.2.9.dylib */; };
+		3E897FB529648B5C00AEBABF /* liballegro_ttf.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA329648B5600AEBABF /* liballegro_ttf.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FB629648B5D00AEBABF /* liballegro_physfs.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA429648B5700AEBABF /* liballegro_physfs.5.2.9.dylib */; };
+		3E897FB729648B5D00AEBABF /* liballegro_physfs.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA429648B5700AEBABF /* liballegro_physfs.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FB829648B5D00AEBABF /* liballegro_acodec.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA529648B5700AEBABF /* liballegro_acodec.5.2.9.dylib */; };
+		3E897FB929648B5E00AEBABF /* liballegro_acodec.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA529648B5700AEBABF /* liballegro_acodec.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FBA29648B5E00AEBABF /* liballegro_audio.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA629648B5800AEBABF /* liballegro_audio.5.2.9.dylib */; };
+		3E897FBB29648B5F00AEBABF /* liballegro_audio.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA629648B5800AEBABF /* liballegro_audio.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FBC29648B6000AEBABF /* liballegro_dialog.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA729648B5800AEBABF /* liballegro_dialog.5.2.9.dylib */; };
+		3E897FBD29648B6000AEBABF /* liballegro_dialog.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA729648B5800AEBABF /* liballegro_dialog.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FBE29648B6100AEBABF /* liballegro_font.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA829648B5900AEBABF /* liballegro_font.5.2.9.dylib */; };
+		3E897FBF29648B6200AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA829648B5900AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FC029648B6200AEBABF /* liballegro_memfile.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FA929648B5900AEBABF /* liballegro_memfile.5.2.9.dylib */; };
+		3E897FC129648B6300AEBABF /* liballegro_memfile.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FA929648B5900AEBABF /* liballegro_memfile.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FC429648B9100AEBABF /* liballegro.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E897FC329648B9100AEBABF /* liballegro.5.2.9.dylib */; };
+		3E897FC529648B9200AEBABF /* liballegro.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E897FC329648B9100AEBABF /* liballegro.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3E897FE629648C4800AEBABF /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FC629648C3900AEBABF /* Main.cpp */; };
+		3E897FE729648C4800AEBABF /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FC829648C3A00AEBABF /* global.cpp */; };
+		3E897FE829648C4800AEBABF /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FCD29648C3D00AEBABF /* Obstacle.cpp */; };
+		3E897FE929648C4800AEBABF /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FCE29648C3E00AEBABF /* Menu.cpp */; };
+		3E897FEA29648C4800AEBABF /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FD029648C3F00AEBABF /* Item.cpp */; };
+		3E897FEB29648C4800AEBABF /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FD129648C3F00AEBABF /* Character.cpp */; };
+		3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FD329648C4100AEBABF /* Oswald_Regular.ttf */; };
+		3E897FED29648C4800AEBABF /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FD629648C4300AEBABF /* Circle.cpp */; };
+		3E897FEE29648C4800AEBABF /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FDA29648C4500AEBABF /* Player.cpp */; };
+		3E897FEF29648C4800AEBABF /* startmenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FDB29648C4600AEBABF /* startmenu.jpg */; };
+		3E897FF029648C4800AEBABF /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FDE29648C4700AEBABF /* Object.cpp */; };
+		3E897FF129648C4800AEBABF /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FE029648C4700AEBABF /* explosion.png */; };
+		3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE129648C4700AEBABF /* Gamewindow.cpp */; };
+		3E897FF329648C4800AEBABF /* Scence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE529648C4800AEBABF /* Scence.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E897F812964883F00AEBABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E897F632964883B00AEBABF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E897F6A2964883B00AEBABF;
+			remoteInfo = BBW;
+		};
+		3E897F8B2964883F00AEBABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E897F632964883B00AEBABF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E897F6A2964883B00AEBABF;
+			remoteInfo = BBW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E897FC229648B6400AEBABF /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E897FC529648B9200AEBABF /* liballegro.5.2.9.dylib in Embed Libraries */,
+				3E897FB529648B5C00AEBABF /* liballegro_ttf.5.2.9.dylib in Embed Libraries */,
+				3E897FC129648B6300AEBABF /* liballegro_memfile.5.2.9.dylib in Embed Libraries */,
+				3E897FB129648B5B00AEBABF /* liballegro_main.5.2.9.dylib in Embed Libraries */,
+				3E897FB729648B5D00AEBABF /* liballegro_physfs.5.2.9.dylib in Embed Libraries */,
+				3E897FBB29648B5F00AEBABF /* liballegro_audio.5.2.9.dylib in Embed Libraries */,
+				3E897FAF29648B5A00AEBABF /* liballegro_image.5.2.9.dylib in Embed Libraries */,
+				3E897FB929648B5E00AEBABF /* liballegro_acodec.5.2.9.dylib in Embed Libraries */,
+				3E897FAB29648B5A00AEBABF /* liballegro_primitives.5.2.9.dylib in Embed Libraries */,
+				3E897FBD29648B6000AEBABF /* liballegro_dialog.5.2.9.dylib in Embed Libraries */,
+				3E897FB329648B5B00AEBABF /* liballegro_color.5.2.9.dylib in Embed Libraries */,
+				3E897FBF29648B6200AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */,
+				3E897FAD29648B5A00AEBABF /* liballegro_video.5.2.9.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E897F6B2964883B00AEBABF /* BBW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E897F742964883E00AEBABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E897F772964883E00AEBABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E897F7B2964883E00AEBABF /* BBW.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BBW.entitlements; sourceTree = "<group>"; };
+		3E897F802964883F00AEBABF /* BBWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E897F8A2964883F00AEBABF /* BBWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E897F9E29648B5400AEBABF /* liballegro_primitives.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_primitives.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_primitives.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897F9F29648B5400AEBABF /* liballegro_video.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_video.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_video.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA029648B5500AEBABF /* liballegro_image.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_image.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_image.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA129648B5500AEBABF /* liballegro_main.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_main.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_main.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA229648B5600AEBABF /* liballegro_color.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_color.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_color.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA329648B5600AEBABF /* liballegro_ttf.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_ttf.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_ttf.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA429648B5700AEBABF /* liballegro_physfs.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_physfs.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_physfs.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA529648B5700AEBABF /* liballegro_acodec.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_acodec.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_acodec.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA629648B5800AEBABF /* liballegro_audio.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_audio.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_audio.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA729648B5800AEBABF /* liballegro_dialog.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_dialog.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_dialog.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA829648B5900AEBABF /* liballegro_font.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_font.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_font.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FA929648B5900AEBABF /* liballegro_memfile.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_memfile.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_memfile.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FC329648B9100AEBABF /* liballegro.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro.5.2.9.dylib; sourceTree = "<group>"; };
+		3E897FC629648C3900AEBABF /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		3E897FC729648C3900AEBABF /* Magicdrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magicdrink.h; sourceTree = "<group>"; };
+		3E897FC829648C3A00AEBABF /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
+		3E897FC929648C3B00AEBABF /* Shield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shield.h; sourceTree = "<group>"; };
+		3E897FCA29648C3B00AEBABF /* task6.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = task6.entitlements; sourceTree = "<group>"; };
+		3E897FCB29648C3C00AEBABF /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		3E897FCC29648C3D00AEBABF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3E897FCD29648C3D00AEBABF /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
+		3E897FCE29648C3E00AEBABF /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		3E897FCF29648C3E00AEBABF /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		3E897FD029648C3F00AEBABF /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		3E897FD129648C3F00AEBABF /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		3E897FD229648C4000AEBABF /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		3E897FD329648C4100AEBABF /* Oswald_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oswald_Regular.ttf; sourceTree = "<group>"; };
+		3E897FD429648C4100AEBABF /* Boxinggloves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boxinggloves.h; sourceTree = "<group>"; };
+		3E897FD529648C4200AEBABF /* Scence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scence.h; sourceTree = "<group>"; };
+		3E897FD629648C4300AEBABF /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
+		3E897FD729648C4300AEBABF /* Maxdrug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maxdrug.h; sourceTree = "<group>"; };
+		3E897FD829648C4400AEBABF /* Gamewindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamewindow.h; sourceTree = "<group>"; };
+		3E897FD929648C4400AEBABF /* Waterbomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waterbomb.h; sourceTree = "<group>"; };
+		3E897FDA29648C4500AEBABF /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		3E897FDB29648C4600AEBABF /* startmenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startmenu.jpg; sourceTree = "<group>"; };
+		3E897FDC29648C4600AEBABF /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		3E897FDD29648C4700AEBABF /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
+		3E897FDE29648C4700AEBABF /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		3E897FDF29648C4700AEBABF /* Cross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cross.h; sourceTree = "<group>"; };
+		3E897FE029648C4700AEBABF /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
+		3E897FE129648C4700AEBABF /* Gamewindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gamewindow.cpp; sourceTree = "<group>"; };
+		3E897FE229648C4700AEBABF /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		3E897FE329648C4700AEBABF /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		3E897FE429648C4800AEBABF /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		3E897FE529648C4800AEBABF /* Scence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scence.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E897F682964883B00AEBABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E897FC429648B9100AEBABF /* liballegro.5.2.9.dylib in Frameworks */,
+				3E897FB429648B5C00AEBABF /* liballegro_ttf.5.2.9.dylib in Frameworks */,
+				3E897FC029648B6200AEBABF /* liballegro_memfile.5.2.9.dylib in Frameworks */,
+				3E897FB029648B5A00AEBABF /* liballegro_main.5.2.9.dylib in Frameworks */,
+				3E897FB629648B5D00AEBABF /* liballegro_physfs.5.2.9.dylib in Frameworks */,
+				3E897FBA29648B5E00AEBABF /* liballegro_audio.5.2.9.dylib in Frameworks */,
+				3E897FAE29648B5A00AEBABF /* liballegro_image.5.2.9.dylib in Frameworks */,
+				3E897FB829648B5D00AEBABF /* liballegro_acodec.5.2.9.dylib in Frameworks */,
+				3E897FAA29648B5900AEBABF /* liballegro_primitives.5.2.9.dylib in Frameworks */,
+				3E897FBC29648B6000AEBABF /* liballegro_dialog.5.2.9.dylib in Frameworks */,
+				3E897FB229648B5B00AEBABF /* liballegro_color.5.2.9.dylib in Frameworks */,
+				3E897FBE29648B6100AEBABF /* liballegro_font.5.2.9.dylib in Frameworks */,
+				3E897FAC29648B5A00AEBABF /* liballegro_video.5.2.9.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F7D2964883F00AEBABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F872964883F00AEBABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E897F622964883B00AEBABF = {
+			isa = PBXGroup;
+			children = (
+				3E897F6D2964883B00AEBABF /* BBW */,
+				3E897F6C2964883B00AEBABF /* Products */,
+				3E897F9D29648B5300AEBABF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E897F6C2964883B00AEBABF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E897F6B2964883B00AEBABF /* BBW.app */,
+				3E897F802964883F00AEBABF /* BBWTests.xctest */,
+				3E897F8A2964883F00AEBABF /* BBWUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E897F6D2964883B00AEBABF /* BBW */ = {
+			isa = PBXGroup;
+			children = (
+				3E897FD429648C4100AEBABF /* Boxinggloves.h */,
+				3E897FD129648C3F00AEBABF /* Character.cpp */,
+				3E897FE229648C4700AEBABF /* Character.h */,
+				3E897FD629648C4300AEBABF /* Circle.cpp */,
+				3E897FCB29648C3C00AEBABF /* Circle.h */,
+				3E897FDF29648C4700AEBABF /* Cross.h */,
+				3E897FE029648C4700AEBABF /* explosion.png */,
+				3E897FE129648C4700AEBABF /* Gamewindow.cpp */,
+				3E897FD829648C4400AEBABF /* Gamewindow.h */,
+				3E897FC829648C3A00AEBABF /* global.cpp */,
+				3E897FDC29648C4600AEBABF /* global.h */,
+				3E897FD029648C3F00AEBABF /* Item.cpp */,
+				3E897FE429648C4800AEBABF /* Item.h */,
+				3E897FDD29648C4700AEBABF /* Lightning.h */,
+				3E897FC729648C3900AEBABF /* Magicdrink.h */,
+				3E897FC629648C3900AEBABF /* Main.cpp */,
+				3E897FD729648C4300AEBABF /* Maxdrug.h */,
+				3E897FCE29648C3E00AEBABF /* Menu.cpp */,
+				3E897FD229648C4000AEBABF /* Menu.h */,
+				3E897FDE29648C4700AEBABF /* Object.cpp */,
+				3E897FE329648C4700AEBABF /* Object.h */,
+				3E897FCD29648C3D00AEBABF /* Obstacle.cpp */,
+				3E897FCF29648C3E00AEBABF /* Obstacle.h */,
+				3E897FD329648C4100AEBABF /* Oswald_Regular.ttf */,
+				3E897FDA29648C4500AEBABF /* Player.cpp */,
+				3E897FCC29648C3D00AEBABF /* Player.h */,
+				3E897FE529648C4800AEBABF /* Scence.cpp */,
+				3E897FD529648C4200AEBABF /* Scence.h */,
+				3E897FC929648C3B00AEBABF /* Shield.h */,
+				3E897FDB29648C4600AEBABF /* startmenu.jpg */,
+				3E897FCA29648C3B00AEBABF /* task6.entitlements */,
+				3E897FD929648C4400AEBABF /* Waterbomb.h */,
+				3E897F742964883E00AEBABF /* Assets.xcassets */,
+				3E897F762964883E00AEBABF /* Main.storyboard */,
+				3E897F7B2964883E00AEBABF /* BBW.entitlements */,
+			);
+			path = BBW;
+			sourceTree = "<group>";
+		};
+		3E897F9D29648B5300AEBABF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E897FC329648B9100AEBABF /* liballegro.5.2.9.dylib */,
+				3E897FA529648B5700AEBABF /* liballegro_acodec.5.2.9.dylib */,
+				3E897FA629648B5800AEBABF /* liballegro_audio.5.2.9.dylib */,
+				3E897FA229648B5600AEBABF /* liballegro_color.5.2.9.dylib */,
+				3E897FA729648B5800AEBABF /* liballegro_dialog.5.2.9.dylib */,
+				3E897FA829648B5900AEBABF /* liballegro_font.5.2.9.dylib */,
+				3E897FA029648B5500AEBABF /* liballegro_image.5.2.9.dylib */,
+				3E897FA129648B5500AEBABF /* liballegro_main.5.2.9.dylib */,
+				3E897FA929648B5900AEBABF /* liballegro_memfile.5.2.9.dylib */,
+				3E897FA429648B5700AEBABF /* liballegro_physfs.5.2.9.dylib */,
+				3E897F9E29648B5400AEBABF /* liballegro_primitives.5.2.9.dylib */,
+				3E897FA329648B5600AEBABF /* liballegro_ttf.5.2.9.dylib */,
+				3E897F9F29648B5400AEBABF /* liballegro_video.5.2.9.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E897F6A2964883B00AEBABF /* BBW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E897F942964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBW" */;
+			buildPhases = (
+				3E897F672964883B00AEBABF /* Sources */,
+				3E897F682964883B00AEBABF /* Frameworks */,
+				3E897F692964883B00AEBABF /* Resources */,
+				3E897FC229648B6400AEBABF /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBW;
+			productName = BBW;
+			productReference = 3E897F6B2964883B00AEBABF /* BBW.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E897F7F2964883F00AEBABF /* BBWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E897F972964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBWTests" */;
+			buildPhases = (
+				3E897F7C2964883F00AEBABF /* Sources */,
+				3E897F7D2964883F00AEBABF /* Frameworks */,
+				3E897F7E2964883F00AEBABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E897F822964883F00AEBABF /* PBXTargetDependency */,
+			);
+			name = BBWTests;
+			productName = BBWTests;
+			productReference = 3E897F802964883F00AEBABF /* BBWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E897F892964883F00AEBABF /* BBWUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E897F9A2964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBWUITests" */;
+			buildPhases = (
+				3E897F862964883F00AEBABF /* Sources */,
+				3E897F872964883F00AEBABF /* Frameworks */,
+				3E897F882964883F00AEBABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E897F8C2964883F00AEBABF /* PBXTargetDependency */,
+			);
+			name = BBWUITests;
+			productName = BBWUITests;
+			productReference = 3E897F8A2964883F00AEBABF /* BBWUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E897F632964883B00AEBABF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3E897F6A2964883B00AEBABF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					3E897F7F2964883F00AEBABF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3E897F6A2964883B00AEBABF;
+					};
+					3E897F892964883F00AEBABF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3E897F6A2964883B00AEBABF;
+					};
+				};
+			};
+			buildConfigurationList = 3E897F662964883B00AEBABF /* Build configuration list for PBXProject "BBW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E897F622964883B00AEBABF;
+			productRefGroup = 3E897F6C2964883B00AEBABF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E897F6A2964883B00AEBABF /* BBW */,
+				3E897F7F2964883F00AEBABF /* BBWTests */,
+				3E897F892964883F00AEBABF /* BBWUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E897F692964883B00AEBABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E897F752964883E00AEBABF /* Assets.xcassets in Resources */,
+				3E897F782964883E00AEBABF /* Main.storyboard in Resources */,
+				3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */,
+				3E897FEF29648C4800AEBABF /* startmenu.jpg in Resources */,
+				3E897FF129648C4800AEBABF /* explosion.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F7E2964883F00AEBABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F882964883F00AEBABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E897F672964883B00AEBABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E897FEE29648C4800AEBABF /* Player.cpp in Sources */,
+				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
+				3E897FE729648C4800AEBABF /* global.cpp in Sources */,
+				3E897FE629648C4800AEBABF /* Main.cpp in Sources */,
+				3E897FE929648C4800AEBABF /* Menu.cpp in Sources */,
+				3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */,
+				3E897FF329648C4800AEBABF /* Scence.cpp in Sources */,
+				3E897FEB29648C4800AEBABF /* Character.cpp in Sources */,
+				3E897FE829648C4800AEBABF /* Obstacle.cpp in Sources */,
+				3E897FEA29648C4800AEBABF /* Item.cpp in Sources */,
+				3E897FF029648C4800AEBABF /* Object.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F7C2964883F00AEBABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E897F862964883F00AEBABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E897F822964883F00AEBABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E897F6A2964883B00AEBABF /* BBW */;
+			targetProxy = 3E897F812964883F00AEBABF /* PBXContainerItemProxy */;
+		};
+		3E897F8C2964883F00AEBABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E897F6A2964883B00AEBABF /* BBW */;
+			targetProxy = 3E897F8B2964883F00AEBABF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E897F762964883E00AEBABF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E897F772964883E00AEBABF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E897F922964883F00AEBABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3E897F932964883F00AEBABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3E897F952964883F00AEBABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBW/BBW.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /ussr/local/lib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		3E897F962964883F00AEBABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BBW/BBW.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /ussr/local/lib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		3E897F982964883F00AEBABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBW.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BBW";
+			};
+			name = Debug;
+		};
+		3E897F992964883F00AEBABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBW.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BBW";
+			};
+			name = Release;
+		};
+		3E897F9B2964883F00AEBABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = BBW;
+			};
+			name = Debug;
+		};
+		3E897F9C2964883F00AEBABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roger.BBWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = BBW;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E897F662964883B00AEBABF /* Build configuration list for PBXProject "BBW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E897F922964883F00AEBABF /* Debug */,
+				3E897F932964883F00AEBABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E897F942964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E897F952964883F00AEBABF /* Debug */,
+				3E897F962964883F00AEBABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E897F972964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E897F982964883F00AEBABF /* Debug */,
+				3E897F992964883F00AEBABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E897F9A2964883F00AEBABF /* Build configuration list for PBXNativeTarget "BBWUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E897F9B2964883F00AEBABF /* Debug */,
+				3E897F9C2964883F00AEBABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E897F632964883B00AEBABF /* Project object */;
+}
