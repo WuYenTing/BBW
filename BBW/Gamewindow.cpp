@@ -74,7 +74,7 @@ Gamewindow::game_init()
     
     
     al_reserve_samples(20);//set mixer
-    sample = al_load_sample("./background_sound.wav");//background music
+    sample = al_load_sample("./sound/background_sound.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
@@ -106,7 +106,7 @@ Gamewindow::game_play()
     msg = -1;
     game_reset();
     game_begin();
-
+    mode_select();//select the mode
     
     printf("game run\n");
     while (msg != GAME_EXIT)
@@ -123,6 +123,13 @@ Gamewindow::game_begin()
     map = al_load_bitmap("./startmenu.jpg");
     al_draw_bitmap(map, 0, 0, 0);
     al_start_timer(timer);
+}
+
+void Gamewindow::mode_select()
+{
+    if (<#condition#>) {
+        <#statements#>
+    }
 }
 
 int
