@@ -109,7 +109,6 @@
 		3E897FC729648C3900AEBABF /* Magicdrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magicdrink.h; sourceTree = "<group>"; };
 		3E897FC829648C3A00AEBABF /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
 		3E897FC929648C3B00AEBABF /* Shield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shield.h; sourceTree = "<group>"; };
-		3E897FCA29648C3B00AEBABF /* task6.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = task6.entitlements; sourceTree = "<group>"; };
 		3E897FCB29648C3C00AEBABF /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		3E897FCC29648C3D00AEBABF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		3E897FCD29648C3D00AEBABF /* Obstacle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
@@ -266,7 +265,6 @@
 				3E897FD529648C4200AEBABF /* Scence.h */,
 				3E897FC929648C3B00AEBABF /* Shield.h */,
 				3E897FDB29648C4600AEBABF /* startmenu.jpg */,
-				3E897FCA29648C3B00AEBABF /* task6.entitlements */,
 				3E897FD929648C4400AEBABF /* Waterbomb.h */,
 			);
 			path = BBW;
