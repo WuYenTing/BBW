@@ -56,7 +56,7 @@
 		3E89808D2964BAED00AEBABF /* liballegro_color.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980742964BAD200AEBABF /* liballegro_color.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3E89808E2964BAEE00AEBABF /* liballegro_font.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; };
 		3E89808F2964BAF000AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4B7EE1632965A56E0099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1622965A56E0099BD7B /* sound */; };
+		4B7EE1672965A9100099BD7B /* background_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1662965A9100099BD7B /* background_sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +165,7 @@
 		3EE762FD296590F4003BF29A /* Mode_capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_capture.h; sourceTree = "<group>"; };
 		3EE762FE2965910A003BF29A /* Mode_classic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_classic.h; sourceTree = "<group>"; };
 		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
-		4B7EE1622965A56E0099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../../../Desktop/sound; sourceTree = "<group>"; };
+		4B7EE1662965A9100099BD7B /* background_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = background_sound.wav; path = ../../../Desktop/sound/background_sound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +228,7 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
-				4B7EE1622965A56E0099BD7B /* sound */,
+				4B7EE1662965A9100099BD7B /* background_sound.wav */,
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
 				3E8980172964AD0300AEBABF /* Assets.xcassets */,
@@ -403,7 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7EE1632965A56E0099BD7B /* sound in Resources */,
+				4B7EE1672965A9100099BD7B /* background_sound.wav in Resources */,
 				3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */,
 				3E8980222964B30A00AEBABF /* Main.storyboard in Resources */,
 				3E897FEF29648C4800AEBABF /* startmenu.jpg in Resources */,

@@ -73,8 +73,8 @@ Gamewindow::game_init()
     al_wait_for_event(event_queue, &event);
     
     
-    al_reserve_samples(20);
-    sample = al_load_sample("./sound/background_sound.wav");//background music
+    al_reserve_samples(20);//set mixer
+    sample = al_load_sample("./background_sound.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
