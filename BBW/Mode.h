@@ -4,6 +4,7 @@
 class Mode
 {
 public:
+    
 
     virtual int Mode_run();
     virtual int Mode_update();
