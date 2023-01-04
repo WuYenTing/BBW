@@ -56,6 +56,7 @@
 		3E89808D2964BAED00AEBABF /* liballegro_color.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980742964BAD200AEBABF /* liballegro_color.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3E89808E2964BAEE00AEBABF /* liballegro_font.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; };
 		3E89808F2964BAF000AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3EE763132965AF1E003BF29A /* Mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE763122965AF1E003BF29A /* Mode.cpp */; };
 		4B7EE1692965ACD50099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1682965ACD50099BD7B /* sound */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,7 @@
 		3EE762FD296590F4003BF29A /* Mode_capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_capture.h; sourceTree = "<group>"; };
 		3EE762FE2965910A003BF29A /* Mode_classic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_classic.h; sourceTree = "<group>"; };
 		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
+		3EE763122965AF1E003BF29A /* Mode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mode.cpp; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				3E897FC929648C3B00AEBABF /* Shield.h */,
 				3E897FDB29648C4600AEBABF /* startmenu.jpg */,
 				3E897FD929648C4400AEBABF /* Waterbomb.h */,
+				3EE763122965AF1E003BF29A /* Mode.cpp */,
 			);
 			path = BBW;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				3E89800D296497B700AEBABF /* bitmap.cpp in Sources */,
 				3E897FE929648C4800AEBABF /* Menu.cpp in Sources */,
 				3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */,
+				3EE763132965AF1E003BF29A /* Mode.cpp in Sources */,
 				3E897FF329648C4800AEBABF /* Scence.cpp in Sources */,
 				3E89800F296497B700AEBABF /* Mode_capture.cpp in Sources */,
 				3E898011296497B700AEBABF /* lzw.cpp in Sources */,

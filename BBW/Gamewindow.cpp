@@ -127,9 +127,7 @@ Gamewindow::game_begin()
 
 void Gamewindow::mode_select()
 {
-    if (<#condition#>) {
-        <#statements#>
-    }
+    
 }
 
 int
