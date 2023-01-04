@@ -161,6 +161,9 @@
 		3E8980732964BAD200AEBABF /* liballegro_audio.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_audio.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_audio.5.2.9.dylib; sourceTree = "<group>"; };
 		3E8980742964BAD200AEBABF /* liballegro_color.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_color.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_color.5.2.9.dylib; sourceTree = "<group>"; };
 		3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_font.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_font.5.2.9.dylib; sourceTree = "<group>"; };
+		3EE762FD296590F4003BF29A /* Mode_capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_capture.h; sourceTree = "<group>"; };
+		3EE762FE2965910A003BF29A /* Mode_classic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_classic.h; sourceTree = "<group>"; };
+		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,11 +226,10 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
-				3E8980202964B30A00AEBABF /* Main.storyboard */,
-				3E8980172964AD0300AEBABF /* Assets.xcassets */,
-				3E8980152964AB6A00AEBABF /* BBW.entitlements */,
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
+				3E8980172964AD0300AEBABF /* Assets.xcassets */,
+				3E8980152964AB6A00AEBABF /* BBW.entitlements */,
 				3E898005296497B600AEBABF /* bitmap.cpp */,
 				3E897FD429648C4100AEBABF /* Boxinggloves.h */,
 				3E897FD129648C3F00AEBABF /* Character.cpp */,
@@ -247,12 +249,16 @@
 				3E898009296497B600AEBABF /* lzw.cpp */,
 				3E897FC729648C3900AEBABF /* Magicdrink.h */,
 				3E897FC629648C3900AEBABF /* Main.cpp */,
+				3E8980202964B30A00AEBABF /* Main.storyboard */,
 				3E897FD729648C4300AEBABF /* Maxdrug.h */,
 				3E897FCE29648C3E00AEBABF /* Menu.cpp */,
 				3E897FD229648C4000AEBABF /* Menu.h */,
 				3E898007296497B600AEBABF /* Mode_capture.cpp */,
+				3EE762FD296590F4003BF29A /* Mode_capture.h */,
 				3E898006296497B600AEBABF /* Mode_classic.cpp */,
+				3EE762FE2965910A003BF29A /* Mode_classic.h */,
 				3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */,
+				3EE762FF29659126003BF29A /* Mode_deathmatch.h */,
 				3E8980142964A4FA00AEBABF /* Mode.h */,
 				3E897FDE29648C4700AEBABF /* Object.cpp */,
 				3E897FE329648C4700AEBABF /* Object.h */,
