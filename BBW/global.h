@@ -13,7 +13,7 @@
 #include <allegro5/allegro_acodec.h>
 
 #include "algif.h"
-
+//ALLEGRO_EVENT_QUEUE *event_queue = NULL;
 //include c++ , algif and allegro5 lib in global
 
 #define window_width 2000

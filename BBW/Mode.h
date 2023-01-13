@@ -1,12 +1,11 @@
 #ifndef Mode_h
 #define Mode_h
-#include "global.h"
 #include "Player.h"
+#include "Item.h"
 class Mode
 {
 public:
-    
-
+    enum item_list {WATERBOMB, MAXDRUG, LIGHTNING, CROSS, SHIELD, BOXGLOVING};
     virtual int Mode_run();
     virtual int Mode_update();
 
@@ -19,14 +18,11 @@ public:
 
     // process of updated event
     virtual int process_event();
-    
-    
-
-   
+    Player* create_player();
+    Item* create_item(item_list,int,int);
     ~Mode();
-
-public:
     bool initial = true;
-
+    
+private:
 };
 #endif // MODE_H_INCLUDED

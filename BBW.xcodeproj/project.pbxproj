@@ -103,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E34A7462971C9700015F43D /* Mode_classic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_classic.h; sourceTree = "<group>"; };
 		3E75FE09297196BF00D4AC63 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = picture; sourceTree = "<group>"; };
 		3E897F6B2964883B00AEBABF /* BBW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E897F802964883F00AEBABF /* BBWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +163,6 @@
 		3E8980742964BAD200AEBABF /* liballegro_color.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_color.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_color.5.2.9.dylib; sourceTree = "<group>"; };
 		3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = liballegro_font.5.2.9.dylib; path = ../../../../usr/local/lib/liballegro_font.5.2.9.dylib; sourceTree = "<group>"; };
 		3EE762FD296590F4003BF29A /* Mode_capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_capture.h; sourceTree = "<group>"; };
-		3EE762FE2965910A003BF29A /* Mode_classic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_classic.h; sourceTree = "<group>"; };
 		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
 		3EE763122965AF1E003BF29A /* Mode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mode.cpp; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				3E898007296497B600AEBABF /* Mode_capture.cpp */,
 				3EE762FD296590F4003BF29A /* Mode_capture.h */,
 				3E898006296497B600AEBABF /* Mode_classic.cpp */,
-				3EE762FE2965910A003BF29A /* Mode_classic.h */,
+				3E34A7462971C9700015F43D /* Mode_classic.h */,
 				3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */,
 				3EE762FF29659126003BF29A /* Mode_deathmatch.h */,
 				3E8980142964A4FA00AEBABF /* Mode.h */,

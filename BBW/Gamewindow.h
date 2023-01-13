@@ -75,7 +75,6 @@ private:
     
     
     ALLEGRO_EVENT_QUEUE *event_queue = NULL;
-    
     ALLEGRO_EVENT event;
     
     ALLEGRO_TIMER *timer = NULL;

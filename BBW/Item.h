@@ -1,14 +1,10 @@
 #ifndef ITEM_H_INCLUDED
 #define ITEM_H_INCLUDED
-
-
 #include "Object.h"
 #include "Circle.h"
-#include "Character.h"
 #include "global.h"
 #include "Player.h"
-#include "Scence.h"
-
+#include <stdio.h>
 class Item : public Object
 {
 public:
@@ -16,14 +12,15 @@ public:
     virtual ~Item();
 
     // override virtual function "Object::Draw"
-    void Draw();
-    bool trigger_item(Player*);
+    virtual void Draw();
+    bool trigger(Player*);
+    int pos_x;
+    int pos_y;
 
-protected:
     // information of Item
     int type;
-    std::vector<ALLEGRO_BITMAP*> item_img;
-    
+    ALLEGRO_BITMAP* item_img[3];
+private:
 };
 
 #endif // ITEM_H_INCLUDED

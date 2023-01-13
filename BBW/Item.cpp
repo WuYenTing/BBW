@@ -1,13 +1,17 @@
 #include "Item.h"
 
-Item::Item(int pos_x, int pos_y)
+Item::Item(int x, int y)
 {
-    this->circle = new Circle(pos_x, pos_y, 70);
+    this->circle = new Circle(x, y, 70);
+    pos_x = x;
+    pos_y = y;
+    
 }
 
 Item::~Item()
 {
-
+    delete circle;
+    
 }
 
 void
@@ -17,7 +21,8 @@ Item::Draw()
 }
 
 bool
-Item::trigger_item(Player *player)
+Item::trigger(Player *player)
 {
+    
     return true;
 }

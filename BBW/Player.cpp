@@ -17,16 +17,16 @@ Player::Draw()
         switch (player_dir)
         {
             case FRONT:
-                
+                al_draw_bitmap(player_img[0], pos_x, pos_y, 0);
                 break;
             case BACK:
-                
+                al_draw_bitmap(player_img[9], pos_x, pos_y, 0);
                 break;
             case LEFT:
-                
+                al_draw_bitmap(player_img[3], pos_x, pos_y, 0);
                 break;
             case RIGHT:
-                
+                al_draw_bitmap(player_img[6], pos_x, pos_y, 0);
                 break;
         }
     }
@@ -36,15 +36,19 @@ Player::Draw()
         {
             case FRONT:
                 
+                al_draw_bitmap(player_img[0], pos_x, pos_y, 0);
                 break;
             case BACK:
                 
+                al_draw_bitmap(player_img[9], pos_x, pos_y, 0);
                 break;
             case LEFT:
                 
+                al_draw_bitmap(player_img[3], pos_x, pos_y, 0);
                 break;
             case RIGHT:
                 
+                al_draw_bitmap(player_img[6], pos_x, pos_y, 0);
                 break;
         }
     }
@@ -62,7 +66,8 @@ Player::player_init()
     player_state = STOP;
     player_dir = FRONT;
     anime = 0;
-    
+    speed = 0;
+    life = 100;
 }
 
 void 
@@ -80,6 +85,10 @@ Player::player_update()
 void 
 Player::player_destroy()
 {
-
+    for(int i=0 ; i<=12; i++)
+    {
+        al_destroy_bitmap(player_img[i]);
+    }
+    
 }
 
