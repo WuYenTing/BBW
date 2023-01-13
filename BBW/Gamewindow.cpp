@@ -1,9 +1,10 @@
 #include "Gamewindow.h"
 #include "global.h"
-#include <iostream>
 
 #define WHITE al_map_rgb(255, 255, 255)
 #define BLACK al_map_rgb(0, 0, 0)
+#define button_width 300
+#define button_height 50
 
 Gamewindow::~Gamewindow(){}
 Gamewindow::Gamewindow()
@@ -14,7 +15,7 @@ Gamewindow::Gamewindow()
     }
     printf("Game Initializing...\n");
     
-    display = al_create_display(2000, 1500);//window_widthh,window_height
+    display = al_create_display(window_width, window_height);//window_widthh,window_height, define in global.h
     event_queue = al_create_event_queue();
     
     timer = al_create_timer(1.0/60);//FPS
@@ -45,16 +46,17 @@ Gamewindow::Gamewindow()
 void
 Gamewindow::game_init()
 {
-    icon = al_load_bitmap("./explosion.png");
+    icon = al_load_bitmap("./picture/explosion.png");
     al_set_display_icon(display, icon);
     
-    start_menu = al_load_bitmap("./startmenu.jpg");
+    start_menu = al_load_bitmap("./picture/menu.jpeg");
     al_draw_bitmap(start_menu, 0, 0, 0);
-    
-    
+    printf("draw menu\n");
+
+    /*
     button = al_load_font("Oswald_Regular.ttf", 36, 0);
     //classic button
-    al_draw_rounded_rectangle(1, 0, 300, 50, 15, 15, WHITE, 5);
+    al_draw_rounded_rectangle(1, 1, 300, 50, 15, 15, WHITE, 5);
     al_draw_filled_rounded_rectangle(1, 1, 300, 50, 15, 15, BLACK);
     al_draw_text(button, WHITE, 10, 0, 0, " CLASSIC ");
     //capture button
@@ -69,7 +71,7 @@ Gamewindow::game_init()
     al_draw_rounded_rectangle(1, 300, 300, 350, 15, 15, WHITE, 5);
     al_draw_filled_rounded_rectangle(1, 300, 300, 350, 15, 15, BLACK);
     al_draw_text(button, WHITE, 10, 300, 0, " EXIT ");
-    
+    */
     al_wait_for_event(event_queue, &event);
     
     
@@ -104,9 +106,9 @@ Gamewindow::game_play()
     
     
     msg = -1;
-    game_reset();
+    //game_reset();
     game_begin();
-    mode_select();//select the mode
+    //mode_select();//select the mode
     
     printf("game run\n");
     while (msg != GAME_EXIT)
@@ -120,9 +122,11 @@ Gamewindow::game_play()
 void
 Gamewindow::game_begin()
 {
-    map = al_load_bitmap("./startmenu.jpg");
+    printf("Game begin\n");
+    map = al_load_bitmap("./picture/menu.jepg");
     al_draw_bitmap(map, 0, 0, 0);
     al_start_timer(timer);
+    
 }
 
 void Gamewindow::mode_select()

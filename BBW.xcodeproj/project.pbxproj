@@ -16,9 +16,7 @@
 		3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FD329648C4100AEBABF /* Oswald_Regular.ttf */; };
 		3E897FED29648C4800AEBABF /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FD629648C4300AEBABF /* Circle.cpp */; };
 		3E897FEE29648C4800AEBABF /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FDA29648C4500AEBABF /* Player.cpp */; };
-		3E897FEF29648C4800AEBABF /* startmenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FDB29648C4600AEBABF /* startmenu.jpg */; };
 		3E897FF029648C4800AEBABF /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FDE29648C4700AEBABF /* Object.cpp */; };
-		3E897FF129648C4800AEBABF /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E897FE029648C4700AEBABF /* explosion.png */; };
 		3E897FF229648C4800AEBABF /* Gamewindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE129648C4700AEBABF /* Gamewindow.cpp */; };
 		3E897FF329648C4800AEBABF /* Scence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FE529648C4800AEBABF /* Scence.cpp */; };
 		3E89800D296497B700AEBABF /* bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E898005296497B600AEBABF /* bitmap.cpp */; };
@@ -58,6 +56,7 @@
 		3E89808F2964BAF000AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3EE763132965AF1E003BF29A /* Mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE763122965AF1E003BF29A /* Mode.cpp */; };
 		4B7EE1692965ACD50099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1682965ACD50099BD7B /* sound */; };
+		4B9A025C29716D03008A6FA6 /* picture in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A025B29716D03008A6FA6 /* picture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,12 +126,10 @@
 		3E897FD829648C4400AEBABF /* Gamewindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamewindow.h; sourceTree = "<group>"; };
 		3E897FD929648C4400AEBABF /* Waterbomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waterbomb.h; sourceTree = "<group>"; };
 		3E897FDA29648C4500AEBABF /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		3E897FDB29648C4600AEBABF /* startmenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startmenu.jpg; sourceTree = "<group>"; };
 		3E897FDC29648C4600AEBABF /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 		3E897FDD29648C4700AEBABF /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		3E897FDE29648C4700AEBABF /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		3E897FDF29648C4700AEBABF /* Cross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cross.h; sourceTree = "<group>"; };
-		3E897FE029648C4700AEBABF /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
 		3E897FE129648C4700AEBABF /* Gamewindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gamewindow.cpp; sourceTree = "<group>"; };
 		3E897FE229648C4700AEBABF /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		3E897FE329648C4700AEBABF /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
@@ -168,6 +165,7 @@
 		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
 		3EE763122965AF1E003BF29A /* Mode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mode.cpp; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
+		4B9A025B29716D03008A6FA6 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = picture; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +228,7 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
-				4B7EE1682965ACD50099BD7B /* sound */,
+				4B9A025B29716D03008A6FA6 /* picture */,
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
 				3E8980172964AD0300AEBABF /* Assets.xcassets */,
@@ -242,7 +240,6 @@
 				3E897FD629648C4300AEBABF /* Circle.cpp */,
 				3E897FCB29648C3C00AEBABF /* Circle.h */,
 				3E897FDF29648C4700AEBABF /* Cross.h */,
-				3E897FE029648C4700AEBABF /* explosion.png */,
 				3E897FE129648C4700AEBABF /* Gamewindow.cpp */,
 				3E897FD829648C4400AEBABF /* Gamewindow.h */,
 				3E898008296497B600AEBABF /* gif.cpp */,
@@ -275,7 +272,7 @@
 				3E897FE529648C4800AEBABF /* Scence.cpp */,
 				3E897FD529648C4200AEBABF /* Scence.h */,
 				3E897FC929648C3B00AEBABF /* Shield.h */,
-				3E897FDB29648C4600AEBABF /* startmenu.jpg */,
+				4B7EE1682965ACD50099BD7B /* sound */,
 				3E897FD929648C4400AEBABF /* Waterbomb.h */,
 				3EE763122965AF1E003BF29A /* Mode.cpp */,
 			);
@@ -408,10 +405,9 @@
 			files = (
 				4B7EE1692965ACD50099BD7B /* sound in Resources */,
 				3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */,
+				4B9A025C29716D03008A6FA6 /* picture in Resources */,
 				3E8980222964B30A00AEBABF /* Main.storyboard in Resources */,
-				3E897FEF29648C4800AEBABF /* startmenu.jpg in Resources */,
 				3E8980192964AD0300AEBABF /* Assets.xcassets in Resources */,
-				3E897FF129648C4800AEBABF /* explosion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

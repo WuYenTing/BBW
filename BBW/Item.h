@@ -1,18 +1,13 @@
 #ifndef ITEM_H_INCLUDED
 #define ITEM_H_INCLUDED
 
-#include <stdio.h>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_font.h>
-#include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_primitives.h>
-#include <vector>
+
 #include "Object.h"
 #include "Circle.h"
 #include "Character.h"
 #include "global.h"
 #include "Player.h"
+#include "Scence.h"
 
 class Item : public Object
 {

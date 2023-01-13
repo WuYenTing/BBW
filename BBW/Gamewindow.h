@@ -1,11 +1,7 @@
 #ifndef MAINWINDOW_H_INCLUDED
 #define MAINWINDOW_H_INCLUDED
 
-#include <allegro5/allegro_audio.h>
-#include <allegro5/allegro_acodec.h>
-#include <vector>
-#include <list>
-#include <time.h>
+#include "global.h"
 #include "Character.h"
 #include "Item.h"
 #include "Menu.h"
@@ -25,6 +21,8 @@
 #define CLASSIC 8
 #define CAPTURE 9
 #define DEATHMATCH 10
+
+
 
 // clock rate
 const float FPS = 60;
