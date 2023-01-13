@@ -26,10 +26,16 @@ public:
 
 private:
     /* data */
-    int direction[4];
+    enum dir {FRONT, BACK, LEFT,RIGHT};
+    dir player_dir;
+    enum state {STOP, MOVE, CHANGE_DIR};
+    state player_state;
     int life;
     int speed;
-    std::vector<ALLEGRO_BITMAP*> player_img;
+    int pos_x,pos_y;
+    int width,height;
+    int anime;
+    ALLEGRO_BITMAP *player_img[12];
 };
 
 #endif // PLAYER_H_INCLUDED

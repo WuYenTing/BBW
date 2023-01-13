@@ -55,14 +55,6 @@ public:
     
 
     bool mouse_hover(int, int, int, int);
-
-
-    Item* create_item(int);
-    Player* create_player_1();
-    Player* create_player_2();
-    Player* create_player_3();
-    Player* create_player_4();
-     
     ~Gamewindow();
 
 public:

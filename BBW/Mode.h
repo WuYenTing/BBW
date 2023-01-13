@@ -1,6 +1,7 @@
 #ifndef Mode_h
 #define Mode_h
 #include "global.h"
+#include "Player.h"
 class Mode
 {
 public:
@@ -19,7 +20,7 @@ public:
     // process of updated event
     virtual int process_event();
     
-   
+    
 
    
     ~Mode();

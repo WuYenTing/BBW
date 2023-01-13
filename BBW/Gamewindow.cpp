@@ -231,39 +231,4 @@ Gamewindow::mouse_hover(int startx, int starty, int width, int height)
 }
 // detect if a tower will be constructed on road
 
-Item*
-Gamewindow::create_item(int)
-{
-    Item* item = NULL;
-    return item;
-}
 
-Player*
-Gamewindow::create_player_1()
-{
-    Player* player_1 = NULL;
-    return player_1;
-}
-
-Player*
-Gamewindow::create_player_2()
-{
-    Player* player_2 = NULL;
-    return player_2;
-}
-
-Player*
-Gamewindow::create_player_3()
-{
-    Player* player_3 = NULL;
-    player_3->player_init();
-    return player_3;
-}
-
-Player*
-Gamewindow::create_player_4()
-{
-    Player* player_4 = NULL;
-    player_4->player_init();
-    return player_4;
-}
