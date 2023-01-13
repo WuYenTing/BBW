@@ -123,8 +123,7 @@ void
 Gamewindow::game_begin()
 {
     printf("Game begin\n");
-    map = al_load_bitmap("./picture/menu.jepg");
-    al_draw_bitmap(map, 0, 0, 0);
+    
     al_start_timer(timer);
     
 }
