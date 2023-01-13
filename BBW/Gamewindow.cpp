@@ -3,8 +3,8 @@
 
 #define WHITE al_map_rgb(255, 255, 255)
 #define BLACK al_map_rgb(0, 0, 0)
-#define button_width 300
-#define button_height 50
+#define button_width 890
+#define button_height 171
 
 Gamewindow::~Gamewindow(){}
 Gamewindow::Gamewindow()
