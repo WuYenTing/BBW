@@ -8,6 +8,10 @@
 #include "Obstacle.h"
 #include "Player.h"
 #include "Scence.h"
+#include "Mode.h"
+#include "Mode_capture.h"
+#include "Mode_classic.h"
+#include "Mode_deathmatch.h"
 
 #define GAME_INIT -1
 #define GAME_SETTING 0
@@ -39,7 +43,8 @@ public:
     void game_reset();
     void game_play();
     void game_begin();
-    void mode_select();
+    void game_draw();
+    int mode_select();
 
     int game_run();
     int game_update();
@@ -64,15 +69,15 @@ private:
     /* data */
     ALLEGRO_BITMAP *icon;
     ALLEGRO_BITMAP *start_menu = NULL;
-    ALLEGRO_BITMAP *map = NULL;
+    //ALLEGRO_BITMAP *map = NULL;
     
 
     ALLEGRO_DISPLAY* display = NULL;
-    
+    /*
     ALLEGRO_FONT *button = NULL;
     ALLEGRO_FONT *capture_button = NULL;
     ALLEGRO_FONT *deathmatch_button = NULL;
-    
+    */
     
     ALLEGRO_EVENT_QUEUE *event_queue = NULL;
     ALLEGRO_EVENT event;
@@ -90,6 +95,8 @@ private:
     int mouse_x, mouse_y;
     int select_classic = -1, select_capture = -1, select_deathmatch = -1;
     bool mute = false;
+    bool draw = true;
+    bool judge_move_to_mode = false;
  
 };
 

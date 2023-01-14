@@ -53,25 +53,6 @@ Gamewindow::game_init()
     al_draw_bitmap(start_menu, 0, 0, 0);
     printf("draw menu\n");
 
-    /*
-    button = al_load_font("Oswald_Regular.ttf", 36, 0);
-    //classic button
-    al_draw_rounded_rectangle(1, 1, 300, 50, 15, 15, WHITE, 5);
-    al_draw_filled_rounded_rectangle(1, 1, 300, 50, 15, 15, BLACK);
-    al_draw_text(button, WHITE, 10, 0, 0, " CLASSIC ");
-    //capture button
-    al_draw_rounded_rectangle(1, 100, 300, 150, 15, 15, WHITE, 5);
-    al_draw_filled_rounded_rectangle(1, 100, 300, 150, 15, 15, BLACK);
-    al_draw_text(button, WHITE, 10, 100, 0, " CAPTURE ");
-    //death match
-    al_draw_rounded_rectangle(1, 200, 300, 250, 15, 15, WHITE, 5);
-    al_draw_filled_rounded_rectangle(1, 200, 300, 250, 15, 15, BLACK);
-    al_draw_text(button, WHITE, 10, 200, 0, " DEATHMATCH ");
-    //exit
-    al_draw_rounded_rectangle(1, 300, 300, 350, 15, 15, WHITE, 5);
-    al_draw_filled_rounded_rectangle(1, 300, 300, 350, 15, 15, BLACK);
-    al_draw_text(button, WHITE, 10, 300, 0, " EXIT ");
-    */
     al_wait_for_event(event_queue, &event);
     
     
