@@ -1,12 +1,8 @@
-//
-//  Mode.cpp
-//  BBW
-//
-//  Created by 吳彥廷 on 2023/1/4.
-//
-
+/*
 #include <iostream>
 #include "Mode.h"
+Mode::~Mode(){}
+
 int
 Mode::Mode_run()
 {
@@ -45,7 +41,7 @@ Mode::draw_Mode_item()
 
 
 int
-Mode::process_event()
+Mode::Mode_process_event()
 {
     return 0;
 }
@@ -79,5 +75,8 @@ Item* Mode::create_item(item_list item,int x,int y){
             return new
             break;
     }*/
-    return i;
-}
+
+    //return i;
+//}
+
+
