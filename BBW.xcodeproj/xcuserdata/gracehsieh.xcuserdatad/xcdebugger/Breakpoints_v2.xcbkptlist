@@ -71,15 +71,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8B9D1199-3927-49E4-885C-7BF53858D451"
+            uuid = "75D52767-38A2-4672-8F19-3D816801FA60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../var/folders/r2/t5rq0z5d7jz5c84_0y48yqph0000gn/T/xcode/scm/BBW/9db195b18628b5ea74145e62f589b355a83555b0/BBW/Gamewindow.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "Gamewindow::game_begin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF43FF40-C64A-4F1C-A5C7-78CF8E71E2BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../var/folders/r2/t5rq0z5d7jz5c84_0y48yqph0000gn/T/xcode/scm/BBW/9db195b18628b5ea74145e62f589b355a83555b0/BBW/Gamewindow.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A00611F5-D855-4753-9812-E166081E5C7D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BBW/Gamewindow.cpp"
+            filePath = "../../../../var/folders/r2/t5rq0z5d7jz5c84_0y48yqph0000gn/T/xcode/scm/BBW/9db195b18628b5ea74145e62f589b355a83555b0/BBW/Gamewindow.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "Gamewindow::game_run()"
             landmarkType = "7">
          </BreakpointContent>
