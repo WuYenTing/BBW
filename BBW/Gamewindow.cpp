@@ -113,7 +113,7 @@ Gamewindow::game_play()
     printf("game run\n");
     while (msg != GAME_EXIT)
     {
-        msg = game_run();
+        msg = mode_select();
     }
     
     show_err_msg(msg);
@@ -128,8 +128,9 @@ Gamewindow::game_begin()
     
 }
 
-void Gamewindow::mode_select()
+int Gamewindow::mode_select()
 {
+    printf("mode select\n");
     
 }
 
