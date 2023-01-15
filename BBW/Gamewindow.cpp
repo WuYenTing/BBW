@@ -38,6 +38,7 @@ Gamewindow::Gamewindow()
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
     al_register_event_source(event_queue, al_get_keyboard_event_source());
+    al_register_event_source(event_queue, al_get_timer_event_source(timer));
     
     game_init();
     
@@ -48,22 +49,6 @@ Gamewindow::game_init()
 {
     icon = al_load_bitmap("./picture/explosion.png");
     al_set_display_icon(display, icon);
-    
-    start_menu = al_load_bitmap("./picture/menu.jpeg");
-    al_draw_bitmap(start_menu, 0, 0, 0);
-    printf("draw menu\n");
-
-    al_wait_for_event(event_queue, &event);
-    
-    
-    al_reserve_samples(20);//set mixer
-    sample = al_load_sample("./sound/background_sound.wav");//background music
-    background_sound = al_create_sample_instance(sample);
-    al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
-    al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
-    al_set_sample_instance_gain(background_sound, 1);
-    al_play_sample_instance(background_sound);
-    
     //sample = al_load_sample("");//click sound
     //click_sound = al_create_sample_instance(sample);
     
@@ -87,7 +72,6 @@ Gamewindow::game_play()
     //game_reset();
     game_begin();
     
-    printf("game run\n");
     while (msg != GAME_EXIT)
     {
         msg = mode_select();
@@ -100,8 +84,9 @@ void
 Gamewindow::game_begin()
 {
     printf("Game begin\n");
-    
+    al_reserve_samples(20);//set mixer
     al_start_timer(timer);
+    menu.init();
     
 }
 
@@ -115,30 +100,6 @@ int Gamewindow::mode_select()
     }
     if (!al_is_event_queue_empty(event_queue))
     {
-        if( event.type == ALLEGRO_EVENT_KEY_UP )
-            {
-                if(event.keyboard.keycode == ALLEGRO_KEY_A )
-                {
-                    printf("KEY_A:CAPTURE\n");
-                    select_mode = CAPTURE;
-                }
-                if(event.keyboard.keycode == ALLEGRO_KEY_B){
-                    printf("KEY_B:CLASSIC\n");
-                    select_mode = CLASSIC;
-                }
-                if (event.keyboard.keycode == ALLEGRO_KEY_C) {
-                    printf("KEY_C:DEATHMATCH\n");
-                    select_mode = DEATHMATCH;
-                }
-                if(event.keyboard.keycode == ALLEGRO_KEY_ESCAPE)
-                {
-                    printf("ESC\n");
-                    return GAME_EXIT;
-                }
-            }
-        if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE ){
-                return GAME_EXIT;
-        }
         error = process_event();
     }
     
@@ -146,48 +107,21 @@ int Gamewindow::mode_select()
 }
 void
 Gamewindow::game_draw(){
+    printf("game draw\n");
+    if(window == 0){
+        menu.draw();
+    }
     al_flip_display();
 }
 
-int
+void
 Gamewindow::game_update()
 {
-    
-    {
-        if(judge_move_to_mode){
-            al_destroy_bitmap(start_menu);
-            al_destroy_sample_instance(background_sound);
-            al_stop_timer(timer);
-            
-            if(select_mode == CLASSIC)
-            {
-                /*
-                Mode_capture *capture = new Mode_capture();
-                capture->Mode_play();
-                delete capture;
-                */
-            }else if(select_mode == CAPTURE)
-            {
-                /*
-                Mode_classic *classic = new Mode_classic();
-                classic->Mode_play();
-                delete classic;
-                 */
-            }else if (select_mode == DEATHMATCH)
-            {
-                /*
-                Mode_deathmatch *deathmatch = new Mode_deathmatch();
-                deathmatch->Mode_play();
-                delete deathmatch;
-                */
-            }
-            
-            judge_move_to_mode = false;
-            al_start_timer(timer);
-            
-        }
-        return GAME_CONTINUE;
+    printf("game update\n");
+    if(next_window && window == 0){
+        menu.~Menu();
     }
+
 }
 
 void
@@ -211,8 +145,6 @@ Gamewindow::game_destroy()
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
     al_destroy_bitmap(icon);
-    //al_destroy_bitmap(start_menu);
-    //al_destroy_font(button);
     
 }
 
@@ -220,25 +152,27 @@ Gamewindow::game_destroy()
 int
 Gamewindow::process_event()
 {
+    int error = GAME_CONTINUE;
+    ALLEGRO_EVENT event;
     al_wait_for_event(event_queue, &event);
-    
     printf("process event\n");
-    if(select_mode == CLASSIC ||select_mode == CAPTURE || select_mode == DEATHMATCH)
-    {
-        judge_move_to_mode = true;
+    if(window == 0){
+        error = menu.process(event);
     }
+    
     if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
         printf("ESC\n");
         return GAME_EXIT;
-    }
-    /*if(event.type == ALLEGRO_EVENT_TIMER){
-        if(event.timer.source == FPS)
+    }else if(event.type == ALLEGRO_EVENT_TIMER){
+        if(event.timer.source == timer)
+            printf("timer\n");
                 draw = true;
-    }*/
+    }
     if(draw) game_update();
-    printf("GAME_CONTINUE\n");
+    //printf("GAME_CONTINUE\n");
     return GAME_CONTINUE;
 }
+
 // detect if mouse hovers over a rectangle
 bool
 Gamewindow::mouse_hover(int startx, int starty, int width, int height)

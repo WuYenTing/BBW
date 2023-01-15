@@ -18,4 +18,21 @@
 
 #define window_width 2000
 #define window_height 1500
-//define window in global for mouse's using
+
+#define GAME_INIT -1
+#define GAME_SETTING 0
+#define GAME_SELECT 1
+#define GAME_BEGIN 2
+#define GAME_CONTINUE 3
+#define GAME_FAIL 4
+#define GAME_TERMINATE 5
+#define GAME_NEXT_LEVEL 6
+#define GAME_EXIT 7
+#define CLASSIC 8
+#define CAPTURE 9
+#define DEATHMATCH 10
+
+extern bool next_window;
+extern int window;
+extern bool esc;
+
