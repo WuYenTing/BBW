@@ -10,11 +10,11 @@ Capture_map::init()
     al_init_acodec_addon();
     
     picture = al_load_bitmap("./picture/scene/capture_map.jpeg");
-    sample = al_load_sample("./sound/background_sound.wav");//background music
+    sample = al_load_sample("./sound/capture_sound 1.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
-    al_set_sample_instance_gain(background_sound, 0.2);
+    al_set_sample_instance_gain(background_sound, 0.25);
     al_play_sample_instance(background_sound);
 }
 

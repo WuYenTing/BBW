@@ -16,7 +16,7 @@ Maxdrug::~Maxdrug()
     maxdrug_pos_x = -10;
     maxdrug_pos_y = -10;
     
-    
+    al_destroy_sample_instance(instance);
 }
 void
 Maxdrug::maxdrug_init(Player*p1_out,Player*p2_out,Player*p3_out,Player*p4_out)
@@ -36,6 +36,10 @@ Maxdrug::maxdrug_init(Player*p1_out,Player*p2_out,Player*p3_out,Player*p4_out)
     p2 = p2_out;
     p3 = p3_out;
     p4 = p4_out;
+    
+    sample = al_load_sample("./sound/sound_taking_pills.wav");
+    instance = al_create_sample_instance(sample);
+    
     printf("maxdrug init success\n");
 }
 void
@@ -45,8 +49,10 @@ Maxdrug::maxdrug_update()
     anime %= anime_time;
     if(trigger()){
         printf("maxdrug update item trigger\n");
-        maxdrug_pos_x = -100;
-        maxdrug_pos_y = -100;
+        maxdrug_pos_x = -500;
+        maxdrug_pos_y = -500;
+        this->circle->x = maxdrug_pos_x;
+        this->circle->y = maxdrug_pos_y;
     }
     else{
         printf("maxdrug update item not trigger\n");
@@ -80,24 +86,48 @@ Maxdrug::trigger()
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
         p1->speed = max_speed;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("maxdrug trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
         p2->speed = max_speed;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("maxdrug trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
         p3->speed = max_speed;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("maxdrug trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
         p4->speed = max_speed;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("maxdrug trigger check 4\n");
         return true;
     }

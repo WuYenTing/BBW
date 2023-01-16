@@ -31,6 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* cross_img[3];
     ALLEGRO_TIMER* cross_timer = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 
 #endif // CROSSS_H_INCLUDED

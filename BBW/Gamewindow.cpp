@@ -66,7 +66,7 @@ Gamewindow::game_play()
 {
     printf("game play\n");
     int msg;
-    //srand(time(NULL));
+    srand(time(NULL));
     
     
     msg = -1;

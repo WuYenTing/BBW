@@ -16,6 +16,7 @@ Lightning::~Lightning()
     }
     lightning_pos_x = -10;
     lightning_pos_y = -10;
+    al_destroy_sample_instance(instance);
     
     
 }
@@ -38,6 +39,10 @@ Lightning::lightning_init(Player*p1_out,Player*p2_out,Player*p3_out,Player*p4_ou
     p2 = p2_out;
     p3 = p3_out;
     p4 = p4_out;
+    
+    sample = al_load_sample("./sound/lighting.wav");
+    instance = al_create_sample_instance(sample);
+    
     printf("lightning init success\n");
 }
 
@@ -48,8 +53,10 @@ Lightning::lightning_update()
     anime %= anime_time;
     if(trigger()){
         printf("lightning update item trigger\n");
-        lightning_pos_x = -100;
-        lightning_pos_y = -100;
+        lightning_pos_x = -500;
+        lightning_pos_y = -500;
+        this->circle->x = lightning_pos_x;
+        this->circle->y = lightning_pos_y;
     }
     else{
         printf("lightning update item not trigger\n");
@@ -84,25 +91,66 @@ Lightning::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
-        p1->life -= minus_life;
+        if(!p1_boxinggloves_trigger){
+            p1->life -= minus_life;
+        }else if (p1_boxinggloves_trigger){
+            p1_boxinggloves_trigger = false;
+        }
+        
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.1);
+        al_play_sample_instance(instance);
+        
         printf("lightning trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
-        p2->life -= minus_life;
+        if(!p2_boxinggloves_trigger){
+            p2->life -= minus_life;
+        }else if (p2_boxinggloves_trigger){
+            p2_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.1);
+        al_play_sample_instance(instance);
+        
         printf("lightning trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
-        p3->life -= minus_life;
+        if(!p3_boxinggloves_trigger){
+            p3->life -= minus_life;
+        }else if (p3_boxinggloves_trigger){
+            p3_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.1);
+        al_play_sample_instance(instance);
+        
         printf("lightning trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
-        p4->life -= minus_life;
+        if(!p4_boxinggloves_trigger){
+            p4->life -= minus_life;
+        }else if (p4_boxinggloves_trigger){
+            p4_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.1);
+        al_play_sample_instance(instance);
+        
         printf("lightning trigger check 4\n");
         return true;
     }

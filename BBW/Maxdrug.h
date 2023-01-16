@@ -31,6 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* maxdrug_img[3];
     ALLEGRO_TIMER* maxdrug_timer = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 
 #endif // MAXDRUG_H_INCLUDED

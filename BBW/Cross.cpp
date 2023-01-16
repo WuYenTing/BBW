@@ -15,6 +15,7 @@ Cross::~Cross()
     }
     cross_pos_x = -10;
     cross_pos_y = -10;
+    al_destroy_sample_instance(instance);
     //al_stop_timer(cross_timer);
     //al_destroy_timer(cross_timer);
 }
@@ -37,6 +38,8 @@ Cross::cross_init(Player*p1_out,Player*p2_out,Player*p3_out,Player*p4_out)
     p2 = p2_out;
     p3 = p3_out;
     p4 = p4_out;
+    sample = al_load_sample("./sound/cross.wav");
+    instance = al_create_sample_instance(sample);
     printf("cross init success\n");
 }
 
@@ -47,8 +50,10 @@ Cross::cross_update()
     anime %= anime_time;
     if(trigger()){
         printf("cross update item trigger\n");
-        //cross_pos_x = -100;
-        //cross_pos_y = -100;
+        cross_pos_x = -500;
+        cross_pos_y = -500;
+        this->circle->x = cross_pos_x;
+        this->circle->y = cross_pos_y;
     }
     else{
         printf("cross update item not trigger\n");
@@ -83,25 +88,65 @@ Cross::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
-        p1->speed = min_speed;
+        if(!p1_boxinggloves_trigger){
+            p1->speed = min_speed;
+        }else if(p1_boxinggloves_trigger){
+            p1_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("cross trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
-        p2->speed = min_speed;
+        if(!p2_boxinggloves_trigger){
+            p2->speed = min_speed;
+        }else if(p2_boxinggloves_trigger){
+            p2_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("cross trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
-        p3->speed = min_speed;
+        if(!p3_boxinggloves_trigger){
+            p3->speed = min_speed;
+        }else if(p3_boxinggloves_trigger){
+            p3_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("cross trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
-        p4->speed = min_speed;
+        if(!p4_boxinggloves_trigger){
+            p4->speed = min_speed;
+        }else if(p4_boxinggloves_trigger){
+            p4_boxinggloves_trigger = false;
+        }
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
+        
         printf("cross trigger check 4\n");
         return true;
     }

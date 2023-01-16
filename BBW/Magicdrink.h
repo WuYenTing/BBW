@@ -31,6 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* magicdrink_img[3];
     ALLEGRO_TIMER* magicdrink_timer = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 
 #endif // MAGICDRINK_H_INCLUDED

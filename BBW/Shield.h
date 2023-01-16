@@ -31,5 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* shield_img[3];
     ALLEGRO_TIMER* shield_timer = NULL;
+    
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 #endif // SHIELD_H_INCLUDED

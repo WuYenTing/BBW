@@ -16,6 +16,7 @@ Magicdrink::~Magicdrink()
     }
     magicdrink_pos_x = -10;
     magicdrink_pos_y = -10;
+    al_destroy_sample_instance(instance);
     //al_stop_timer(cross_timer);
     //al_destroy_timer(cross_timer);
 }
@@ -38,6 +39,10 @@ Magicdrink::magicdrink_init(Player*p1_out,Player*p2_out,Player*p3_out,Player*p4_
     p2 = p2_out;
     p3 = p3_out;
     p4 = p4_out;
+    
+    sample = al_load_sample("./sound/magicdrink.wav");
+    instance = al_create_sample_instance(sample);
+    
     printf("magicdrink init success\n");
 }
 
@@ -48,8 +53,10 @@ Magicdrink::magicdrink_update()
     anime %= anime_time;
     if(trigger()){
         printf("magicdrink update item trigger\n");
-        magicdrink_pos_x = -100;
-        magicdrink_pos_y = -100;
+        magicdrink_pos_x = -500;
+        magicdrink_pos_y = -500;
+        this->circle->x = magicdrink_pos_x;
+        this->circle->y = magicdrink_pos_y;
     }
     else{
         printf("magicdrink update item not trigger\n");
@@ -88,6 +95,12 @@ Magicdrink::trigger()
         if(p1->life <= 100 - add_life)
             p1->life += add_life;
         else p1->life = 100;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.8);
+        al_play_sample_instance(instance);
+        
         printf("magicdrink trigger check 1\n");
         return true;
     }
@@ -96,6 +109,12 @@ Magicdrink::trigger()
         if(p2->life <= 100 - add_life)
             p2->life += add_life;
         else p2->life = 100;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.8);
+        al_play_sample_instance(instance);
+        
         printf("magicdrink trigger check 2\n");
         return true;
     }
@@ -104,6 +123,12 @@ Magicdrink::trigger()
         if(p3->life <= 100 - add_life)
             p3->life += add_life;
         else p3->life = 100;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.8);
+        al_play_sample_instance(instance);
+        
         printf("magicdrink trigger check 3\n");
         return true;
     }
@@ -112,6 +137,12 @@ Magicdrink::trigger()
         if(p4->life <= 100 - add_life)
             p4->life += add_life;
         else p4->life = 100;
+        
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 0.8);
+        al_play_sample_instance(instance);
+        
         printf("magicdrink trigger check 4\n");
         return true;
     }

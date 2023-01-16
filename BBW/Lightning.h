@@ -31,6 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* lightning_img[3];
     ALLEGRO_TIMER* lightning_timer = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 
 #endif // LIGHTNING_H_INCLUDED

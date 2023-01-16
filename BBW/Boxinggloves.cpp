@@ -51,8 +51,8 @@ Boxinggloves::boxinggloves_update()
     anime %= anime_time;
     if(trigger()){
         printf("boxinggloves update item trigger\n");
-        boxinggloves_pos_x = -100;
-        boxinggloves_pos_y = -100;
+        boxinggloves_pos_x = -500;
+        boxinggloves_pos_y = -500;
         this->circle->x = boxinggloves_pos_x;
         this->circle->y = boxinggloves_pos_y;
     }
@@ -91,40 +91,48 @@ Boxinggloves::trigger()
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
         p1_boxinggloves_trigger = true;
+        
         al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
         al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
         al_set_sample_instance_gain(instance, 1);
         al_play_sample_instance(instance);
+        
         printf("boxinggloves trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
         p2_boxinggloves_trigger = true;
+        
         al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
         al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
         al_set_sample_instance_gain(instance, 1);
         al_play_sample_instance(instance);
+        
         printf("boxinggloves trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
         p3_boxinggloves_trigger = true;
+        
         al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
         al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
         al_set_sample_instance_gain(instance, 1);
         al_play_sample_instance(instance);
+        
         printf("boxinggloves trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
         p4_boxinggloves_trigger = true;
+        
         al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
         al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
         al_set_sample_instance_gain(instance, 1);
         al_play_sample_instance(instance);
+        
         printf("boxinggloves trigger check 4\n");
         return true;
     }
