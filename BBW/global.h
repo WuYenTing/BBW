@@ -46,6 +46,11 @@ extern bool p2_boxinggloves_trigger;
 extern bool p3_boxinggloves_trigger;
 extern bool p4_boxinggloves_trigger;
 
+extern bool p1_shield_trigger;
+extern bool p2_shield_trigger;
+extern bool p3_shield_trigger;
+extern bool p4_shield_trigger;
+
 extern int max_speed;
 extern int min_speed;
 

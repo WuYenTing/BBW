@@ -1,7 +1,7 @@
 #include "Cross.h"
 Cross::Cross(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     cross_pos_x = x;
     cross_pos_y = y;
 }

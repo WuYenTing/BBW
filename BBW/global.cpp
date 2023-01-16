@@ -13,6 +13,12 @@ bool p2_boxinggloves_trigger = false;
 bool p3_boxinggloves_trigger = false;
 bool p4_boxinggloves_trigger = false;
 
+bool p1_shield_trigger = false;
+bool p2_shield_trigger = false;
+bool p3_shield_trigger = false;
+bool p4_shield_trigger = false;
+
+
 int max_speed = 10;
 int min_speed = 2;
 

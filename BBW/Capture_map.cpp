@@ -9,7 +9,7 @@ Capture_map::init()
     al_init_image_addon();
     al_init_acodec_addon();
     
-    picture = al_load_bitmap("./picture/mode/capture.jpeg");
+    picture = al_load_bitmap("./picture/scene/capture_map.jpeg");
     sample = al_load_sample("./sound/background_sound.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);

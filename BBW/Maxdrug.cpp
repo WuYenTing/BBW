@@ -2,7 +2,7 @@
 //max speed
 Maxdrug::Maxdrug(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     maxdrug_pos_x = x;
     maxdrug_pos_y = y;
 }

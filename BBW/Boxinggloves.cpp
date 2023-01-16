@@ -1,7 +1,7 @@
 #include "Boxinggloves.h"
 Boxinggloves::Boxinggloves(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     boxinggloves_pos_x = x;
     boxinggloves_pos_y = y;
 }

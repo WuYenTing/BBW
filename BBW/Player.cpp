@@ -2,7 +2,7 @@
 
 Player::Player(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     pos_x = x;
     pos_y = y;
 }

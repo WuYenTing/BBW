@@ -9,12 +9,12 @@ Menu::init()
     al_init_image_addon();
     al_init_acodec_addon();
     
-    menu = al_load_bitmap("./picture/menu.jpeg");
-    sample = al_load_sample("./sound/background_sound.wav");//background music
-    background_sound = al_create_sample_instance(sample);
+    menu = al_load_bitmap("./picture/scene/menu.jpeg");
+    sample1 = al_load_sample("./sound/background_sound.wav");//background music
+    background_sound = al_create_sample_instance(sample1);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
-    sample = al_load_sample("./sound/click_sound.wav");
-    click_sound = al_create_sample_instance(sample);
+    sample2 = al_load_sample("./sound/click_sound.wav");
+    click_sound = al_create_sample_instance(sample2);
     al_set_sample_instance_playmode(click_sound, ALLEGRO_PLAYMODE_ONCE);
     al_restore_default_mixer();
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());

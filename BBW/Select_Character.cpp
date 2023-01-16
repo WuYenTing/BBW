@@ -9,7 +9,7 @@ Select_Character::init()
     al_init_image_addon();
     al_init_acodec_addon();
     
-    picture = al_load_bitmap("./picture/startmenu_test.jpg");
+    picture = al_load_bitmap("./picture/scene/select_character.jpeg");
     sample = al_load_sample("./sound/select_character.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);

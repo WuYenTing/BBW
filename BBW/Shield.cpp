@@ -1,7 +1,7 @@
 #include "Shield.h"
 Shield::Shield(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     shield_pos_x = x;
     shield_pos_y = y;
 }

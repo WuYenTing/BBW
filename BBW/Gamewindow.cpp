@@ -215,7 +215,7 @@ Gamewindow::process_event()
         p2 ->player_process(event,timer);
     }
     
-    if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
+    if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE || event.type == ALLEGRO_KEY_ESCAPE){
         printf("ESC\n");
         error = GAME_EXIT;
     }else if(event.type == ALLEGRO_EVENT_TIMER){

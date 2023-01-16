@@ -2,7 +2,7 @@
 //minus life
 Lightning::Lightning(int x,int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     lightning_pos_x = x;
     lightning_pos_y = y;
 }

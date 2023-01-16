@@ -2,7 +2,7 @@
 //add life
 Magicdrink::Magicdrink(int x, int y)
 {
-    this->circle = new Circle(x, y, 70);
+    this->circle = new Circle(x, y, 50);
     magicdrink_pos_x = x;
     magicdrink_pos_y = y;
 }
