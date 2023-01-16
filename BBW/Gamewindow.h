@@ -108,6 +108,8 @@ private:
     
     ALLEGRO_TIMER *timer = NULL;
     
+    
+    
     Menu menu;
     Select_Character select_character;
     Capture_map capture_map;

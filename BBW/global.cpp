@@ -27,3 +27,15 @@ int minus_life = 20;
 
 bool p1_attack = false;
 int p1_attack_time = 0;
+
+double ts = 0;
+double elapsed_time = 0;
+int game_time = 0;
+
+//int p1_life = 100;
+//int p2_life = 100;
+
+char p1_life_string[101] = {'\0'};
+char p2_life_string[101] = {'\0'};
+char time_string[181] = {'\0'};
+

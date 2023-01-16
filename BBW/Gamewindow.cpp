@@ -132,7 +132,14 @@ Gamewindow::game_draw(){
         mk->Draw();
         li->Draw();
         sh->Draw();
+        
         //ob->Draw();
+    }else if (window == PLAYER1_WIN){
+        player1_win.draw();
+    }else if (window == PLAYER2_WIN){
+        player2_win.draw();
+    }else if (window == PLAYER_TIE){
+        player1_win.draw();
     }
     al_flip_display();
 }
@@ -150,15 +157,13 @@ Gamewindow::game_update()
        
     }else if(next_window && window == SELECT_CHARATER){
         select_character.destroy();
-        //if(select_capture == 1){
+      
             capture_map.init();
-            //select_capture = -1;
+            ts = al_get_time();
+        
+        
             window = CAPTURE_MAP;
-        //}else if(select_deathmatch == 1){
-            //deathmatch_map.init();
-            //select_deathmatch = -1;
-            //window = DEATHMATCH_MAP;
-        //}
+        
         
         p1->player_init(W,S,A,D,X,1);
         p1->waterbomb_init();
@@ -173,7 +178,9 @@ Gamewindow::game_update()
         li->lightning_init(p1, p2, p3, p4);
         sh->shield_init(p1, p2, p3, p4);
         //ob->obstacle_init(p1, p2, p3, p4);
-         
+        sprintf(p1_life_string, "P1 LIFE : %.2f", p1->life );
+        sprintf(p2_life_string, "P2 LIFE : %.2f", p2->life );
+        sprintf(time_string, "time = %3d", 181);
         next_window = false;
         
     }else if(window == CAPTURE_MAP /*|| window == DEATHMATCH_MAP*/){
@@ -199,12 +206,32 @@ Gamewindow::game_update()
         li->lightning_update();
         sh->shield_update();
         //ob->obstacle_update();
+        elapsed_time = 181 - (al_get_time() - ts);
+        game_time = (int) elapsed_time;
+        
+        sprintf(p1_life_string, "P1 LIFE : %.2f", p1->life);
+        sprintf(p2_life_string, "P2 LIFE : %.2f", p2->life);
+        sprintf(time_string, "time = %3d", game_time);
+        
+        if(game_time == 0 || p1->life <= 0 || p2->life <= 0){
+            if(p1->life > p2->life){
+                next_window = true;
+                window = PLAYER1_WIN;
+            }else if(p1->life < p2->life){
+                next_window = true;
+                window = PLAYER2_WIN;
+            }else if(p1->life == p2->life){
+                next_window = true;
+                window = PLAYER_TIE;
+            }
+        }
          
     }
     
     if(next_window && window == PLAYER1_WIN){
         //if(select_capture){
             capture_map.destroy();
+
         //}else if(select_deathmatch){
             //deathmatch_map.destroy();
         //}
@@ -254,14 +281,7 @@ Gamewindow::process_event()
         
         p1 ->player_process(event,timer);
         p2 ->player_process(event,timer);
-        //trigger
-        //if(game_time == 0 && p1.life > p2.life)
         
-        /*}else if(window == DEATHMATCH_MAP){
-         
-         p1 ->player_process(event,timer);
-         p2 ->player_process(event,timer);
-         }*/
     }else if (window == PLAYER1_WIN){
         error = player1_win.process(event);
         if(error == GAME_EXIT) return GAME_EXIT;

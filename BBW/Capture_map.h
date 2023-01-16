@@ -16,5 +16,9 @@ private:
     ALLEGRO_SAMPLE_INSTANCE *background_sound = NULL;
     ALLEGRO_SAMPLE_INSTANCE *click_sound = NULL;
     
+    ALLEGRO_FONT *p1_life= NULL;         //add
+    ALLEGRO_FONT *p2_life=NULL;
+    ALLEGRO_FONT *g_time= NULL;          //add
+    
 };
 

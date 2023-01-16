@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
 #include <vector>
 #include <list>
@@ -63,3 +63,13 @@ extern int p1_x;
 extern int p1_y;
 extern int p2_x;
 extern int p2_y;
+
+//extern int p1_life;
+//extern int p2_life;
+extern char p1_life_string[101];
+extern char p2_life_string[101];
+extern char time_string[181];
+
+extern double ts;
+extern double elapsed_time;
+extern int game_time;
