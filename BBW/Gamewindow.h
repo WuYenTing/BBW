@@ -18,7 +18,7 @@
 #include "Menu.h"
 #include "Select_Character.h"
 #include "Capture_map.h"
-#include "Deathmatch_map.h"
+//#include "Deathmatch_map.h"
 #include "Player1_win.h"
 #include "Player2_win.h"
 #include "Player_tie.h"
@@ -113,7 +113,7 @@ private:
     Menu menu;
     Select_Character select_character;
     Capture_map capture_map;
-    Deathmatch_map deathmatch_map;
+    //Deathmatch_map deathmatch_map;
     Player1_win player1_win;
     Player2_win player2_win;
     Player_tie player_tie;

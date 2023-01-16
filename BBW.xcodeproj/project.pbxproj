@@ -62,11 +62,10 @@
 		4B4193C2297522C100CDEA0C /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4193BB297522C100CDEA0C /* explosion.png */; };
 		4B4193C4297524A800CDEA0C /* Shield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C3297524A800CDEA0C /* Shield.cpp */; };
 		4B4193C72975290800CDEA0C /* Capture_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C62975290800CDEA0C /* Capture_map.cpp */; };
-		4B4193CA2975691600CDEA0C /* Deathmatch_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C82975691600CDEA0C /* Deathmatch_map.cpp */; };
-		4B4193CD29756B5B00CDEA0C /* Player1_win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193CB29756B5B00CDEA0C /* Player1_win.cpp */; };
 		4B4193CF29756D6800CDEA0C /* BBW in Resources */ = {isa = PBXBuildFile; fileRef = 4B4193CE29756D6800CDEA0C /* BBW */; };
 		4B4193D229756D8C00CDEA0C /* Player2_win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193D029756D8C00CDEA0C /* Player2_win.cpp */; };
 		4B4193D529756E1C00CDEA0C /* Player_tie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193D329756E1C00CDEA0C /* Player_tie.cpp */; };
+		4B4193DC29759B4B00CDEA0C /* Player1_win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193DA29759B4B00CDEA0C /* Player1_win.cpp */; };
 		4B7EE1692965ACD50099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1682965ACD50099BD7B /* sound */; };
 /* End PBXBuildFile section */
 
@@ -180,15 +179,13 @@
 		4B4193C3297524A800CDEA0C /* Shield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shield.cpp; sourceTree = "<group>"; };
 		4B4193C5297528EC00CDEA0C /* Capture_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture_map.h; sourceTree = "<group>"; };
 		4B4193C62975290800CDEA0C /* Capture_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Capture_map.cpp; sourceTree = "<group>"; };
-		4B4193C82975691600CDEA0C /* Deathmatch_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Deathmatch_map.cpp; sourceTree = "<group>"; };
-		4B4193C92975691600CDEA0C /* Deathmatch_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deathmatch_map.h; sourceTree = "<group>"; };
-		4B4193CB29756B5B00CDEA0C /* Player1_win.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player1_win.cpp; sourceTree = "<group>"; };
 		4B4193CC29756B5B00CDEA0C /* Player1_win.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player1_win.h; sourceTree = "<group>"; };
-		4B4193CE29756D6800CDEA0C /* BBW */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BBW; sourceTree = "<group>"; };
+		4B4193CE29756D6800CDEA0C /* BBW */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BBW; sourceTree = "<group>"; };
 		4B4193D029756D8C00CDEA0C /* Player2_win.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player2_win.cpp; sourceTree = "<group>"; };
 		4B4193D129756D8C00CDEA0C /* Player2_win.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player2_win.h; sourceTree = "<group>"; };
 		4B4193D329756E1C00CDEA0C /* Player_tie.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player_tie.cpp; sourceTree = "<group>"; };
 		4B4193D429756E1C00CDEA0C /* Player_tie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player_tie.h; sourceTree = "<group>"; };
+		4B4193DA29759B4B00CDEA0C /* Player1_win.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player1_win.cpp; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,8 +265,6 @@
 				3E897FCB29648C3C00AEBABF /* Circle.h */,
 				4B4193B8297522C100CDEA0C /* Cross.cpp */,
 				3E897FDF29648C4700AEBABF /* Cross.h */,
-				4B4193C82975691600CDEA0C /* Deathmatch_map.cpp */,
-				4B4193C92975691600CDEA0C /* Deathmatch_map.h */,
 				4B4193BB297522C100CDEA0C /* explosion.png */,
 				3E897FE129648C4700AEBABF /* Gamewindow.cpp */,
 				3E897FD829648C4400AEBABF /* Gamewindow.h */,
@@ -299,7 +294,7 @@
 				4B4193D429756E1C00CDEA0C /* Player_tie.h */,
 				3E897FDA29648C4500AEBABF /* Player.cpp */,
 				3E897FCC29648C3D00AEBABF /* Player.h */,
-				4B4193CB29756B5B00CDEA0C /* Player1_win.cpp */,
+				4B4193DA29759B4B00CDEA0C /* Player1_win.cpp */,
 				4B4193CC29756B5B00CDEA0C /* Player1_win.h */,
 				4B4193D029756D8C00CDEA0C /* Player2_win.cpp */,
 				4B4193D129756D8C00CDEA0C /* Player2_win.h */,
@@ -474,14 +469,13 @@
 				3E898010296497B700AEBABF /* gif.cpp in Sources */,
 				4B4193D229756D8C00CDEA0C /* Player2_win.cpp in Sources */,
 				3E897FEE29648C4800AEBABF /* Player.cpp in Sources */,
+				4B4193DC29759B4B00CDEA0C /* Player1_win.cpp in Sources */,
 				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
 				4B4193C0297522C100CDEA0C /* Magicdrink.cpp in Sources */,
 				4B4193BC297522C100CDEA0C /* Boxinggloves.cpp in Sources */,
 				4B4193BF297522C100CDEA0C /* Cross.cpp in Sources */,
 				4B4193BD297522C100CDEA0C /* Maxdrug.cpp in Sources */,
-				4B4193CA2975691600CDEA0C /* Deathmatch_map.cpp in Sources */,
 				4B4193C4297524A800CDEA0C /* Shield.cpp in Sources */,
-				4B4193CD29756B5B00CDEA0C /* Player1_win.cpp in Sources */,
 				3E897FE729648C4800AEBABF /* global.cpp in Sources */,
 				4B4193B42973F40E00CDEA0C /* Select_Character.cpp in Sources */,
 				3E898013296497B700AEBABF /* algif.cpp in Sources */,
