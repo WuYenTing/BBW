@@ -121,6 +121,7 @@ Gamewindow::game_draw(){
         capture_map.draw();
         
         p1->Draw();
+        p1->Draw_waterbomb();
         p2->Draw();
         it->Draw();
         cr->Draw();
@@ -130,7 +131,6 @@ Gamewindow::game_draw(){
         mk->Draw();
         li->Draw();
         sh->Draw();
-        wa->Draw();
         ob->Draw();
     }
     al_flip_display();
@@ -160,6 +160,7 @@ Gamewindow::game_update()
         //}
         
         p1->player_init(W,S,A,D,X,1);
+        p1->waterbomb_init();
         p2->player_init(I,K,J,L,M,2);
         cr->cross_init(p1, p2, p3, p4);
         it->item_init(p1, p2, p3, p4);
@@ -169,7 +170,6 @@ Gamewindow::game_update()
         mk->magicdrink_init(p1, p2, p3, p4);
         li->lightning_init(p1, p2, p3, p4);
         sh->shield_init(p1, p2, p3, p4);
-        wa->waterbomb_init(p1, p2, p3, p4);
         ob->obstacle_init(p1, p2, p3, p4);
          
         next_window = false;
@@ -177,6 +177,7 @@ Gamewindow::game_update()
     }else if(window == CAPTURE_MAP /*|| window == DEATHMATCH_MAP*/){
         
         p1->player_update();
+        p1->waterbomb_update();
         p2->player_update();
         it->item_update();
         cr->cross_update();
@@ -186,7 +187,6 @@ Gamewindow::game_update()
         mk->magicdrink_update();
         li->lightning_update();
         sh->shield_update();
-        wa->waterbomb_update();
         ob->obstacle_update();
          
     }
@@ -385,16 +385,6 @@ Gamewindow::create_magicdrink()
            x = new Shield(900,700);
            printf("creat Shield success\n");
            return x;
-       }
-
-       Waterbomb*
-       Gamewindow::create_waterbomb(int x,int y)
-       {
-           Waterbomb* wa = NULL;
-           printf("creat Waterbomb \n");
-           wa = new Waterbomb(x,y);
-           printf("creat Waterbomb success\n");
-           return wa;
        }
 
        Item*

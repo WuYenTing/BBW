@@ -25,8 +25,8 @@ Boxinggloves::boxinggloves_init(Player*p1_out,Player*p2_out,Player*p3_out,Player
     for(int i=0;i<3;i++)
     {
         char path[50];
-        //snprintf(path,sizeof(path), "./picture/cross/cross%d.png", i);
-        snprintf(path,sizeof(path), "./picture/character/move%d.png", i);
+        snprintf(path,sizeof(path), "./picture/boxinggloves/boxinggloves%d.png", i+1);
+        //snprintf(path,sizeof(path), "./picture/character/move%d.png", i);
         boxinggloves_img[i] = al_load_bitmap(path);
     }
     //cross_timer = al_create_timer(1.0/60);

@@ -56,3 +56,10 @@ extern int min_speed;
 
 extern int add_life;
 extern int minus_life;
+
+extern bool p1_attack;
+extern int p1_attack_time;
+extern int p1_x;
+extern int p1_y;
+extern int p2_x;
+extern int p2_y;

@@ -1,4 +1,4 @@
-#ifndef WATERBOMB_H_INCLUDED
+/*#ifndef WATERBOMB_H_INCLUDED
 #define WATERBOMB_H_INCLUDED
 #include <stdio.h>
 #include <allegro5/allegro.h>
@@ -36,3 +36,4 @@ public:
 };
 
 #endif // WATERBOMB_H_INCLUDED
+*/

@@ -77,8 +77,6 @@ public:
     Lightning* li = create_lightning();
     Shield* create_shield();
     Shield* sh = create_shield();
-    Waterbomb* create_waterbomb(int x=0,int y=0);
-    Waterbomb* wa = create_waterbomb(900,900);
     Item* create_item();
     Item* it = create_item();
     Obstacle* create_obstacle(int x=0,int y=0,int t=0);

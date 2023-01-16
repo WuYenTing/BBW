@@ -24,3 +24,6 @@ int min_speed = 2;
 
 int add_life = 10;
 int minus_life = 20;
+
+bool p1_attack = false;
+int p1_attack_time = 0;

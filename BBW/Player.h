@@ -9,18 +9,19 @@
 #include <allegro5/allegro_primitives.h>
 #include "Object.h"
 #include "global.h"
-//#include "Waterbomb.h"
 //#include "Gamewindow.h"
 class Player : public Object
 {
 public:
     Player(int x = 0, int y = 0);
     ~Player();
-    void Draw();    
+    void Draw();
     void player_init(char up,char down, char left, char right, char attack, int type);
     void player_process(ALLEGRO_EVENT,ALLEGRO_TIMER*);
     void player_update();
     void player_destroy();
+    void create_waterbomb(int ,int );
+    
     int pos_x,pos_y;
     int life;
     int speed;
@@ -29,6 +30,20 @@ public:
     int type;
     //Waterbomb* create_waterbomb(int x=0,int y=0);
     //Waterbomb* player_waterbomb = NULL;
+    void create_waterbomb();
+    void Draw_waterbomb();
+    void waterbomb_init();
+    void waterbomb_update();
+    bool waterbomb_trigger();
+    int waterbomb_pos_x;
+    int waterbomb_pos_y;
+    int waterbomb_start;
+    int waterbomb_center_x;
+    int waterbomb_center_y;
+    int range;
+    int cd_time;
+    int explore;
+    int set_time;
 private:
     /* data */
     enum dir {FRONT, BACK, LEFT, RIGHT};
@@ -38,6 +53,7 @@ private:
     int width,height;
     
     ALLEGRO_BITMAP *player_img[12];
+    ALLEGRO_BITMAP *waterbomb_img[3];
     ALLEGRO_EVENT player_event;
     ALLEGRO_TIMER *player_timer = NULL;
     int OPERATION_UP;
