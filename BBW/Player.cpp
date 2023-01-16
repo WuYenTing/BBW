@@ -279,7 +279,7 @@ Player::waterbomb_update()
         }
     }
     //if(set_time  )
-    if(waterbomb_trigger()){
+    if(waterbomb_trigger(5, 10)){
         printf("waterbomb update item trigger\n");
         waterbomb_pos_x = -500;
         waterbomb_pos_y = -500;
