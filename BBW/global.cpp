@@ -6,3 +6,4 @@ bool mode_next_window = false;
 int mode_window = 0;
 bool esc = false;
 int select_classic = -1, select_capture = -1, select_deathmatch = -1;
+bool key_state[ALLEGRO_KEY_MAX] = {false};

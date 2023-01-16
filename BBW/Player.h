@@ -8,30 +8,43 @@
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_primitives.h>
 #include "Object.h"
-
+#include "global.h"
+//#include "Waterbomb.h"
+//#include "Gamewindow.h"
 class Player : public Object
 {
 public:
-    Player(int = 0, int = 0);
+    Player(int x = 0, int y = 0);
     ~Player();
     void Draw();    
-    void player_init();
-    void player_process();
+    void player_init(char up,char down, char left, char right, char attack, int type);
+    void player_process(ALLEGRO_EVENT,ALLEGRO_TIMER*);
     void player_update();
     void player_destroy();
-
+    int pos_x,pos_y;
+    int life;
+    int speed;
+    int anime ;
+    int anime_time;
+    int type;
+    //Waterbomb* create_waterbomb(int x=0,int y=0);
+    //Waterbomb* player_waterbomb = NULL;
 private:
     /* data */
-    enum dir {FRONT, BACK, LEFT,RIGHT};
+    enum dir {FRONT, BACK, LEFT, RIGHT};
     dir player_dir;
     enum state {STOP, MOVE, CHANGE_DIR};
     state player_state;
-    int life;
-    int speed;
-    int pos_x,pos_y;
     int width,height;
-    int anime;
+    
     ALLEGRO_BITMAP *player_img[12];
+    ALLEGRO_EVENT player_event;
+    ALLEGRO_TIMER *player_timer = NULL;
+    int OPERATION_UP;
+    int OPERATION_DOWN;
+    int OPERATION_LEFT;
+    int OPERATION_RIGHT;
+    int OPERATION_ATTACK;
 };
 
 #endif // PLAYER_H_INCLUDED

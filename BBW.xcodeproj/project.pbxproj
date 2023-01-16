@@ -57,6 +57,15 @@
 		3E89808F2964BAF000AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3EE763132965AF1E003BF29A /* Mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE763122965AF1E003BF29A /* Mode.cpp */; };
 		4B4193B42973F40E00CDEA0C /* Select_Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B22973F40E00CDEA0C /* Select_Character.cpp */; };
+		4B4193BC297522C100CDEA0C /* Boxinggloves.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B5297522C100CDEA0C /* Boxinggloves.cpp */; };
+		4B4193BD297522C100CDEA0C /* Maxdrug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B6297522C100CDEA0C /* Maxdrug.cpp */; };
+		4B4193BE297522C100CDEA0C /* Lightning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B7297522C100CDEA0C /* Lightning.cpp */; };
+		4B4193BF297522C100CDEA0C /* Cross.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B8297522C100CDEA0C /* Cross.cpp */; };
+		4B4193C0297522C100CDEA0C /* Magicdrink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B9297522C100CDEA0C /* Magicdrink.cpp */; };
+		4B4193C1297522C100CDEA0C /* Waterbomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193BA297522C100CDEA0C /* Waterbomb.cpp */; };
+		4B4193C2297522C100CDEA0C /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4193BB297522C100CDEA0C /* explosion.png */; };
+		4B4193C4297524A800CDEA0C /* Shield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C3297524A800CDEA0C /* Shield.cpp */; };
+		4B4193C72975290800CDEA0C /* Capture_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C62975290800CDEA0C /* Capture_map.cpp */; };
 		4B7EE1692965ACD50099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1682965ACD50099BD7B /* sound */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +177,16 @@
 		3EE763122965AF1E003BF29A /* Mode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mode.cpp; sourceTree = "<group>"; };
 		4B4193B22973F40E00CDEA0C /* Select_Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Select_Character.cpp; sourceTree = "<group>"; };
 		4B4193B32973F40E00CDEA0C /* Select_Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Select_Character.h; sourceTree = "<group>"; };
+		4B4193B5297522C100CDEA0C /* Boxinggloves.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boxinggloves.cpp; sourceTree = "<group>"; };
+		4B4193B6297522C100CDEA0C /* Maxdrug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Maxdrug.cpp; sourceTree = "<group>"; };
+		4B4193B7297522C100CDEA0C /* Lightning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lightning.cpp; sourceTree = "<group>"; };
+		4B4193B8297522C100CDEA0C /* Cross.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cross.cpp; sourceTree = "<group>"; };
+		4B4193B9297522C100CDEA0C /* Magicdrink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Magicdrink.cpp; sourceTree = "<group>"; };
+		4B4193BA297522C100CDEA0C /* Waterbomb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Waterbomb.cpp; sourceTree = "<group>"; };
+		4B4193BB297522C100CDEA0C /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
+		4B4193C3297524A800CDEA0C /* Shield.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shield.cpp; sourceTree = "<group>"; };
+		4B4193C5297528EC00CDEA0C /* Capture_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture_map.h; sourceTree = "<group>"; };
+		4B4193C62975290800CDEA0C /* Capture_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Capture_map.cpp; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,18 +250,20 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
-				3E75FE09297196BF00D4AC63 /* picture */,
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
 				3E8980172964AD0300AEBABF /* Assets.xcassets */,
 				3E8980152964AB6A00AEBABF /* BBW.entitlements */,
 				3E898005296497B600AEBABF /* bitmap.cpp */,
+				4B4193B5297522C100CDEA0C /* Boxinggloves.cpp */,
 				3E897FD429648C4100AEBABF /* Boxinggloves.h */,
 				3E897FD129648C3F00AEBABF /* Character.cpp */,
 				3E897FE229648C4700AEBABF /* Character.h */,
 				3E897FD629648C4300AEBABF /* Circle.cpp */,
 				3E897FCB29648C3C00AEBABF /* Circle.h */,
+				4B4193B8297522C100CDEA0C /* Cross.cpp */,
 				3E897FDF29648C4700AEBABF /* Cross.h */,
+				4B4193BB297522C100CDEA0C /* explosion.png */,
 				3E897FE129648C4700AEBABF /* Gamewindow.cpp */,
 				3E897FD829648C4400AEBABF /* Gamewindow.h */,
 				3E898008296497B600AEBABF /* gif.cpp */,
@@ -250,11 +271,14 @@
 				3E897FDC29648C4600AEBABF /* global.h */,
 				3E897FD029648C3F00AEBABF /* Item.cpp */,
 				3E897FE429648C4800AEBABF /* Item.h */,
+				4B4193B7297522C100CDEA0C /* Lightning.cpp */,
 				3E897FDD29648C4700AEBABF /* Lightning.h */,
 				3E898009296497B600AEBABF /* lzw.cpp */,
+				4B4193B9297522C100CDEA0C /* Magicdrink.cpp */,
 				3E897FC729648C3900AEBABF /* Magicdrink.h */,
 				3E897FC629648C3900AEBABF /* Main.cpp */,
 				3E8980202964B30A00AEBABF /* Main.storyboard */,
+				4B4193B6297522C100CDEA0C /* Maxdrug.cpp */,
 				3E897FD729648C4300AEBABF /* Maxdrug.h */,
 				3E897FCE29648C3E00AEBABF /* Menu.cpp */,
 				3E897FD229648C4000AEBABF /* Menu.h */,
@@ -264,22 +288,27 @@
 				3E34A7462971C9700015F43D /* Mode_classic.h */,
 				3E89800A296497B700AEBABF /* Mode_deathmatch.cpp */,
 				3EE762FF29659126003BF29A /* Mode_deathmatch.h */,
+				3EE763122965AF1E003BF29A /* Mode.cpp */,
 				3E8980142964A4FA00AEBABF /* Mode.h */,
 				3E897FDE29648C4700AEBABF /* Object.cpp */,
 				3E897FE329648C4700AEBABF /* Object.h */,
 				3E897FCD29648C3D00AEBABF /* Obstacle.cpp */,
 				3E897FCF29648C3E00AEBABF /* Obstacle.h */,
 				3E897FD329648C4100AEBABF /* Oswald_Regular.ttf */,
+				3E75FE09297196BF00D4AC63 /* picture */,
 				3E897FDA29648C4500AEBABF /* Player.cpp */,
 				3E897FCC29648C3D00AEBABF /* Player.h */,
 				3E897FE529648C4800AEBABF /* Scence.cpp */,
 				3E897FD529648C4200AEBABF /* Scence.h */,
-				3E897FC929648C3B00AEBABF /* Shield.h */,
-				4B7EE1682965ACD50099BD7B /* sound */,
-				3E897FD929648C4400AEBABF /* Waterbomb.h */,
-				3EE763122965AF1E003BF29A /* Mode.cpp */,
 				4B4193B22973F40E00CDEA0C /* Select_Character.cpp */,
 				4B4193B32973F40E00CDEA0C /* Select_Character.h */,
+				4B4193C3297524A800CDEA0C /* Shield.cpp */,
+				3E897FC929648C3B00AEBABF /* Shield.h */,
+				4B7EE1682965ACD50099BD7B /* sound */,
+				4B4193BA297522C100CDEA0C /* Waterbomb.cpp */,
+				3E897FD929648C4400AEBABF /* Waterbomb.h */,
+				4B4193C5297528EC00CDEA0C /* Capture_map.h */,
+				4B4193C62975290800CDEA0C /* Capture_map.cpp */,
 			);
 			path = BBW;
 			sourceTree = "<group>";
@@ -411,6 +440,7 @@
 				4B7EE1692965ACD50099BD7B /* sound in Resources */,
 				3E897FEC29648C4800AEBABF /* Oswald_Regular.ttf in Resources */,
 				3E8980222964B30A00AEBABF /* Main.storyboard in Resources */,
+				4B4193C2297522C100CDEA0C /* explosion.png in Resources */,
 				3E75FE0A297196BF00D4AC63 /* picture in Resources */,
 				3E8980192964AD0300AEBABF /* Assets.xcassets in Resources */,
 			);
@@ -440,10 +470,16 @@
 				3E898010296497B700AEBABF /* gif.cpp in Sources */,
 				3E897FEE29648C4800AEBABF /* Player.cpp in Sources */,
 				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
+				4B4193C0297522C100CDEA0C /* Magicdrink.cpp in Sources */,
+				4B4193BC297522C100CDEA0C /* Boxinggloves.cpp in Sources */,
+				4B4193BF297522C100CDEA0C /* Cross.cpp in Sources */,
+				4B4193BD297522C100CDEA0C /* Maxdrug.cpp in Sources */,
+				4B4193C4297524A800CDEA0C /* Shield.cpp in Sources */,
 				3E898012296497B700AEBABF /* Mode_deathmatch.cpp in Sources */,
 				3E897FE729648C4800AEBABF /* global.cpp in Sources */,
 				4B4193B42973F40E00CDEA0C /* Select_Character.cpp in Sources */,
 				3E898013296497B700AEBABF /* algif.cpp in Sources */,
+				4B4193C1297522C100CDEA0C /* Waterbomb.cpp in Sources */,
 				3E897FE629648C4800AEBABF /* Main.cpp in Sources */,
 				3E89800E296497B700AEBABF /* Mode_classic.cpp in Sources */,
 				3E89800D296497B700AEBABF /* bitmap.cpp in Sources */,
@@ -456,7 +492,9 @@
 				3E897FEB29648C4800AEBABF /* Character.cpp in Sources */,
 				3E897FE829648C4800AEBABF /* Obstacle.cpp in Sources */,
 				3E897FEA29648C4800AEBABF /* Item.cpp in Sources */,
+				4B4193C72975290800CDEA0C /* Capture_map.cpp in Sources */,
 				3E897FF029648C4800AEBABF /* Object.cpp in Sources */,
+				4B4193BE297522C100CDEA0C /* Lightning.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

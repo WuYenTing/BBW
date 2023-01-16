@@ -1,26 +1,35 @@
 #ifndef ITEM_H_INCLUDED
 #define ITEM_H_INCLUDED
+
+#include <stdio.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_primitives.h>
 #include "Object.h"
-#include "Circle.h"
 #include "global.h"
 #include "Player.h"
-#include <stdio.h>
 class Item : public Object
 {
 public:
-    Item(int = 0, int = 0);
-    virtual ~Item();
-
-    // override virtual function "Object::Draw"
-    virtual void Draw();
-    bool trigger(Player*);
+    Item(int x= 0, int y= 0);
+    ~Item();
+    void Draw();
+    void item_init(Player*,Player*,Player*,Player*);
+    void item_update();
+    bool trigger();
+    int anime;
+    int anime_time;
     int pos_x;
     int pos_y;
-
-    // information of Item
-    int type;
+    int item_start;
+    Player *p1;
+    Player *p2;
+    Player *p3;
+    Player *p4;
     ALLEGRO_BITMAP* item_img[3];
-private:
+    ALLEGRO_TIMER* item_timer = NULL;
 };
 
 #endif // ITEM_H_INCLUDED

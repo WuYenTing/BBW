@@ -1,33 +1,36 @@
 #ifndef MAXDRUG_H_INCLUDED
 #define MAXDRUG_H_INCLUDED
+#include <stdio.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_primitives.h>
+#include "Object.h"
+#include "global.h"
+#include "Player.h"
 #include "Item.h"
-class Maxdrug : public Item
+class Maxdrug : public Object
 {
 public:
-    Maxdrug(int pos_x, int pos_y)
-    {
-        this->item = new item(pos_x, pos_y);
-        maxdrug_pos_x = pos_x;
-        maxdrug_pos_y = pos_y;
-        char path[50];
-        for(int i=0;i<3;i++){
-            sprintf(path, "./picture/maxdrug/maxdrug%d.png", i);
-        }
-    }
+    Maxdrug(int x=0, int y=0);
     ~Maxdrug();
-    void Draw(){
-        
-    }
+    void Draw();
+    void maxdrug_init(Player*,Player*,Player*,Player*);
+    void maxdrug_update();
+    bool trigger();
+    int anime;
+    int anime_time;
     int maxdrug_pos_x;
     int maxdrug_pos_y;
+    int maxdrug_start;
+    int cd_time = 0;
+    Player* p1;
+    Player* p2;
+    Player* p3;
+    Player* p4;
+    ALLEGRO_BITMAP* maxdrug_img[3];
+    ALLEGRO_TIMER* maxdrug_timer = NULL;
 };
-
-Maxdrug::Maxdrug(/* args */)
-{
-}
-
-Maxdrug::~Maxdrug()
-{
-}
 
 #endif // MAXDRUG_H_INCLUDED

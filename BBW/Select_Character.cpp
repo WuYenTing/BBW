@@ -13,7 +13,6 @@ Select_Character::init()
     sample = al_load_sample("./sound/select_character.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
-    al_restore_default_mixer();
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
     al_set_sample_instance_gain(background_sound, 1);
     al_play_sample_instance(background_sound);
@@ -31,12 +30,12 @@ Select_Character::process(ALLEGRO_EVENT event)
             case ALLEGRO_KEY_1:
                 printf("press 1\n");
                 next_window = true;
-                return PLAYER_1;
+                //return PLAYER_1;
                 break;
             case ALLEGRO_KEY_2:
                 printf("press 2\n");
                 next_window = true;
-                return PLAYER_2;
+                //return PLAYER_2;
                 break;
         }
     }

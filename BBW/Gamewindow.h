@@ -4,11 +4,20 @@
 #include "global.h"
 #include "Character.h"
 #include "Item.h"
-#include "Menu.h"
+#include "Boxinggloves.h"
+#include "Cross.h"
+#include "Magicdrink.h"
+#include "Maxdrug.h"
+#include "Lightning.h"
+#include "Shield.h"
+#include "Waterbomb.h"
+
 #include "Obstacle.h"
 #include "Player.h"
 #include "Scence.h"
+#include "Menu.h"
 #include "Select_Character.h"
+#include "Capture_map.h"
 //#include "Mode.h"
 //#include "Mode_capture.h"
 //#include "Mode_classic.h"
@@ -47,7 +56,42 @@ public:
 
     bool mouse_hover(int, int, int, int);
     ~Gamewindow();
+    Player* create_player(int ,int);
+    Player* p1 = create_player(200,200);
+    Player* p2 = create_player(100,100);
+    Player* p3 = create_player(-101,-101);
+    Player* p4 = create_player(-101,-101);
+    Boxinggloves* create_boxinggloves();
+    Boxinggloves* bx = create_boxinggloves();
+    Cross* create_cross();
+    Cross* cr = create_cross();
+    Magicdrink* create_magicdrink();
+    Magicdrink* mk = create_magicdrink();
+    Maxdrug* create_maxdrug();
+    Maxdrug* mg = create_maxdrug();
+    Lightning* create_lightning();
+    Lightning* li = create_lightning();
+    Shield* create_shield();
+    Shield* sh = create_shield();
+    Waterbomb* create_waterbomb(int x=0,int y=0);
+    Waterbomb* wa = create_waterbomb(900,900);
+    Item* create_item();
+    Item* it = create_item();
+    Obstacle* create_obstacle(int x=0,int y=0,int t=0);
+    Obstacle* ob = create_obstacle(1200,1200,2);
+    std::vector<Obstacle*> wallset;
+    void create_wall();
+    char W = 'W';
+    char S = 'S';
+    char A = 'A';
+    char D = 'D';
+    char X = 'X';
 
+    char I = 'I';
+    char K = 'K';
+    char J = 'J';
+    char L = 'L';
+    char M = 'M';
 public:
     bool initial = true;
 
@@ -64,6 +108,7 @@ private:
     
     Menu menu;
     Select_Character select_character;
+    Capture_map capture_map;
 
     int select_mode = 0, c = 0;
     int mouse_x, mouse_y;

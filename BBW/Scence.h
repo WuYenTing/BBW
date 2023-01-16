@@ -14,7 +14,7 @@ public:
     Scence(){}
     ~Scence(){}
     virtual void init() = 0;
-    virtual int process(ALLEGRO_EVENT event) = 0;
+    int process(ALLEGRO_EVENT event);
     virtual void draw() = 0;
     virtual void destroy() = 0;
 };

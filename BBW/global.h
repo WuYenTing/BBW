@@ -40,4 +40,4 @@ extern bool mode_next_window;
 extern int mode_window;
 extern bool esc;
 extern int select_classic, select_capture, select_deathmatch;
-
+extern bool key_state[ALLEGRO_KEY_MAX];
