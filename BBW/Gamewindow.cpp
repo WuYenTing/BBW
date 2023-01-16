@@ -362,7 +362,7 @@ Gamewindow::create_boxinggloves()
 {
     Boxinggloves* x = NULL;
     printf("creat Boxinggloves \n");
-    x = new Boxinggloves(300,500);
+    x = new Boxinggloves(74,350);
     printf("creat Boxinggloves success\n");
     return x;
 }
@@ -372,7 +372,7 @@ Gamewindow::create_cross()
 {
     Cross *cr = NULL;
     printf("creat cross cr\n");
-    cr = new Cross(500,500);
+    cr = new Cross(702,558);
     printf("creat cross cr success\n");
     return cr;
 }
@@ -382,7 +382,7 @@ Gamewindow::create_magicdrink()
 {
     Magicdrink* x = NULL;
            printf("creat Magicdrink \n");
-           x = new Magicdrink(300,300);
+           x = new Magicdrink(1260,264);
            printf("creat Magicdrink success\n");
            return x;
        }
@@ -392,7 +392,7 @@ Gamewindow::create_magicdrink()
        {
            Maxdrug* x = NULL;
            printf("creat Maxdrug \n");
-           x = new Maxdrug(300,700);
+           x = new Maxdrug(1648,1192);
            printf("creat Maxdrug success\n");
            return x;
        }
@@ -403,7 +403,7 @@ Gamewindow::create_magicdrink()
        {
            Lightning* x = NULL;
            printf("creat Lightning \n");
-           x = new Lightning(700,700);
+           x = new Lightning(584,1300);
            printf("creat Lightning success\n");
            return x;
        }
@@ -413,7 +413,7 @@ Gamewindow::create_magicdrink()
        {
            Shield* x = NULL;
            printf("creat Shield \n");
-           x = new Shield(900,700);
+           x = new Shield(1066,850);
            printf("creat Shield success\n");
            return x;
        }
@@ -423,7 +423,7 @@ Gamewindow::create_magicdrink()
        {
            Item *i = NULL;
            printf("creat item i\n");
-           i = new Item(100,100);
+           i = new Item(-100,-100);
            printf("creat item i success\n");
            return i;
        }

@@ -57,6 +57,70 @@ Cross::cross_update()
     }
     else{
         printf("cross update item not trigger\n");
+        int t = al_get_time();
+                switch (t%11){
+                    case 0:
+                        cross_pos_x = 140;
+                        cross_pos_y = 550;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 1:
+                        cross_pos_x = 214;
+                        cross_pos_y = 650;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 2:
+                        cross_pos_x = 840;
+                        cross_pos_y = 348;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 3:
+                        cross_pos_x = 1268;
+                        cross_pos_y = 450;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 4:
+                        cross_pos_x = 1466;
+                        cross_pos_y = 644;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 5:
+                        cross_pos_x = 1470;
+                        cross_pos_y = 634;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 6:
+                        cross_pos_x = 950;
+                        cross_pos_y = 1300;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 7:
+                        cross_pos_x = 1420;
+                        cross_pos_y = 950;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 8:
+                        cross_pos_x = 1214;
+                        cross_pos_y = 1122;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    case 9:
+                        cross_pos_x = 352;
+                        cross_pos_y = 1196;
+                        this->circle->x = cross_pos_x;
+                        this->circle->y = cross_pos_y;
+                        break;
+                    
+                }
     }
 }
 

@@ -9,7 +9,13 @@ Player::Player(int x, int y)
 
 Player::~Player()
 {
-    
+    delete circle;
+    for(int i=0;i<12;i++)
+    {
+        al_destroy_bitmap(player_img[i]);
+    }
+    pos_x = -10;
+    pos_y = -10;
 }
 
 void

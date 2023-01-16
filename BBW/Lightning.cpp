@@ -60,6 +60,70 @@ Lightning::lightning_update()
     }
     else{
         printf("lightning update item not trigger\n");
+        int t = al_get_time();
+                switch (t%11){
+                    case 0:
+                        lightning_pos_x = 766;
+                        lightning_pos_y = 450;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 1:
+                        lightning_pos_x = 782;
+                        lightning_pos_y = 550;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 2:
+                        lightning_pos_x = 920;
+                        lightning_pos_y = 452;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 3:
+                        lightning_pos_x = 776;
+                        lightning_pos_y = 546;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 4:
+                        lightning_pos_x = 910;
+                        lightning_pos_y = 650;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 5:
+                        lightning_pos_x = 850;
+                        lightning_pos_y = 634;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 6:
+                        lightning_pos_x = 860;
+                        lightning_pos_y = 1300;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 7:
+                        lightning_pos_x = 1402;
+                        lightning_pos_y = 754;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 8:
+                        lightning_pos_x = 1536;
+                        lightning_pos_y = 948;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    case 9:
+                        lightning_pos_x = 1520;
+                        lightning_pos_y = 1050;
+                        this->circle->x = lightning_pos_x;
+                        this->circle->y = lightning_pos_y;
+                        break;
+                    
+                }
     }
 }
 

@@ -20,7 +20,7 @@ bool p4_shield_trigger = false;
 
 
 int max_speed = 8;
-int min_speed = 1;
+int min_speed = -2;
 
 int add_life = 10;
 int minus_life = 20;

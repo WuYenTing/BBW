@@ -61,8 +61,8 @@ public:
     bool mouse_hover(int, int, int, int);
     ~Gamewindow();
     Player* create_player(int ,int);
-    Player* p1 = create_player(200,200);
-    Player* p2 = create_player(100,100);
+    Player* p1 = create_player(1614,150);
+    Player* p2 = create_player(416,1100);
     Player* p3 = create_player(-101,-101);
     Player* p4 = create_player(-101,-101);
     Boxinggloves* create_boxinggloves();
