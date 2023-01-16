@@ -31,6 +31,8 @@ public:
     Player* p4;
     ALLEGRO_BITMAP* boxinggloves_img[3];
     ALLEGRO_TIMER* boxinggloves_timer = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;// add
+    ALLEGRO_SAMPLE_INSTANCE *instance;// add
 };
 
 #endif // BOXINGGLOVES_H_INCLUDED

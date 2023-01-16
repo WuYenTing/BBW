@@ -15,6 +15,7 @@ Boxinggloves::~Boxinggloves()
     }
     boxinggloves_pos_x = -10;
     boxinggloves_pos_y = -10;
+    al_destroy_sample_instance(instance);
     
     
 }
@@ -37,6 +38,9 @@ Boxinggloves::boxinggloves_init(Player*p1_out,Player*p2_out,Player*p3_out,Player
     p2 = p2_out;
     p3 = p3_out;
     p4 = p4_out;
+    sample = al_load_sample("./sound/boxinggloves.wav");
+    instance = al_create_sample_instance(sample);
+    
     printf("boxinggloves init success\n");
 }
 
@@ -49,6 +53,8 @@ Boxinggloves::boxinggloves_update()
         printf("boxinggloves update item trigger\n");
         boxinggloves_pos_x = -100;
         boxinggloves_pos_y = -100;
+        this->circle->x = boxinggloves_pos_x;
+        this->circle->y = boxinggloves_pos_y;
     }
     else{
         printf("boxinggloves update item not trigger\n");
@@ -80,28 +86,45 @@ Boxinggloves::trigger()
     printf("boxinggloves trigger check\n");
     printf("(%d,%d)---p1 ",p1->getX(),p1->getY());
     printf("(%d,%d)---boxinggloves\n",this->getX(),this->getY());
+    
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
         p1_boxinggloves_trigger = true;
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
         printf("boxinggloves trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
         p2_boxinggloves_trigger = true;
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
         printf("boxinggloves trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
         p3_boxinggloves_trigger = true;
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
         printf("boxinggloves trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
         p4_boxinggloves_trigger = true;
+        al_set_sample_instance_playmode(instance, ALLEGRO_PLAYMODE_ONCE);
+        al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+        al_set_sample_instance_gain(instance, 1);
+        al_play_sample_instance(instance);
         printf("boxinggloves trigger check 4\n");
         return true;
     }
