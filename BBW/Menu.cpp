@@ -13,8 +13,13 @@ Menu::init()
     sample = al_load_sample("./sound/background_sound.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
+    sample = al_load_sample("./sound/click_sound.wav");
+    click_sound = al_create_sample_instance(sample);
+    al_set_sample_instance_playmode(click_sound, ALLEGRO_PLAYMODE_ONCE);
     al_restore_default_mixer();
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
+    al_attach_sample_instance_to_mixer(click_sound, al_get_default_mixer());
+    al_set_sample_instance_gain(click_sound, 2);
     al_set_sample_instance_gain(background_sound, 1);
     al_play_sample_instance(background_sound);
 }
@@ -32,16 +37,19 @@ Menu::process(ALLEGRO_EVENT event)
                 printf("press 1\n");
                 next_window = true;
                 select_capture = 1;
+                al_play_sample_instance(click_sound);
                 break;
             case ALLEGRO_KEY_2:
                 printf("press 2\n");
                 next_window = true;
                 select_classic = 1;
+                al_play_sample_instance(click_sound);
                 break;
             case ALLEGRO_KEY_3:
                 printf("press 3\n");
                 next_window = true;
                 select_deathmatch = 1;
+                al_play_sample_instance(click_sound);
                 break;
         }
     }
@@ -60,4 +68,5 @@ Menu::destroy()
     printf("destroy menu\n");
     al_destroy_bitmap(menu);
     al_destroy_sample_instance(background_sound);
+    al_destroy_sample_instance(click_sound);
 }
