@@ -123,6 +123,7 @@ Gamewindow::game_draw(){
         p1->Draw();
         p1->Draw_waterbomb();
         p2->Draw();
+        p2->Draw_waterbomb();
         it->Draw();
         cr->Draw();
         bx->Draw();
@@ -162,6 +163,7 @@ Gamewindow::game_update()
         p1->player_init(W,S,A,D,X,1);
         p1->waterbomb_init();
         p2->player_init(I,K,J,L,M,2);
+        p2->waterbomb_init();
         cr->cross_init(p1, p2, p3, p4);
         it->item_init(p1, p2, p3, p4);
         bx->boxinggloves_init(p1, p2, p3, p4);
@@ -179,6 +181,7 @@ Gamewindow::game_update()
         p1->player_update();
         p1->waterbomb_update();
         p2->player_update();
+        p2->waterbomb_update();
         it->item_update();
         cr->cross_update();
         bx->boxinggloves_update();

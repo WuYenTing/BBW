@@ -255,10 +255,10 @@ Player::create_waterbomb(int x,int y)
 void
 Player::waterbomb_init()
 {
-    for(int i=0  ; i<3 ;i++)
+    for(int i=0  ; i<4 ;i++)
     {
         char path[100];
-        snprintf(path,sizeof(path), "./picture/character/move%d.png",i);
+        snprintf(path,sizeof(path), "./picture/waterbomb/waterbomb%d.png",i+1);
         //snprintf(path,sizeof(path), "./1move%d.png",  i);
         waterbomb_img[i] = al_load_bitmap(path);
     }
@@ -281,8 +281,8 @@ Player::waterbomb_update()
     //if(set_time  )
     if(waterbomb_trigger()){
         printf("waterbomb update item trigger\n");
-        waterbomb_pos_x = -100;
-        waterbomb_pos_y = -100;
+        waterbomb_pos_x = -500;
+        waterbomb_pos_y = -500;
     }
     else{
         printf("waterbomb update item not trigger\n");
@@ -308,35 +308,40 @@ Player::Draw_waterbomb()
                 break;
         }
         if(set_time >= 120){
-            range = 300;
+            //range = 300;
             waterbomb_center_x = waterbomb_pos_x;
             waterbomb_center_y = waterbomb_pos_y;
             for(int x = 0; x < range; x++){
-                al_draw_bitmap(waterbomb_img[1], waterbomb_center_x+x, waterbomb_center_y, 0);
-            }
-            for(int x = 0; x > -range; x--){
-                al_draw_bitmap(waterbomb_img[1], waterbomb_center_x+x, waterbomb_center_y, 0);
+                al_draw_bitmap(waterbomb_img[3], waterbomb_center_x+x, waterbomb_center_y, 0);
             }
             for(int y = 0; y < range; y++){
-                al_draw_bitmap(waterbomb_img[1], waterbomb_center_x, waterbomb_center_y+y, 0);
+                al_draw_bitmap(waterbomb_img[3], waterbomb_center_x, waterbomb_center_y+y, 0);
+            }
+            for(int x = 0; x > -range; x--){
+                al_draw_bitmap(waterbomb_img[3], waterbomb_center_x+x, waterbomb_center_y, 0);
             }
             for(int y = 0; y > -range; y--){
-                al_draw_bitmap(waterbomb_img[1], waterbomb_center_x, waterbomb_center_y+y, 0);
+                al_draw_bitmap(waterbomb_img[3], waterbomb_center_x, waterbomb_center_y+y, 0);
             }
         }
     }
     else
     {
-        waterbomb_pos_x = -50;
-        waterbomb_pos_y = -50;
+        waterbomb_pos_x = -500;
+        waterbomb_pos_y = -500;
     }
     printf("waterbomb draw success\n");
 }
 
 bool
-Player::waterbomb_trigger(){
+Player::waterbomb_trigger(int x,int y){
+    int right_area_x = waterbomb_pos_x + range +75;
+    int left_area_x = waterbomb_pos_x + range;
+    int up_area_y = waterbomb_pos_y + range;
+    int down_area_y = waterbomb_pos_y - range - 75;
     if(set_time >= 120 && set_time <= 210){
         return false;
     }
+    //if(x+70>=waterbomb_pos_x)
     return false;
 }

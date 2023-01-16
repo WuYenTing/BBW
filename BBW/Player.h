@@ -34,13 +34,13 @@ public:
     void Draw_waterbomb();
     void waterbomb_init();
     void waterbomb_update();
-    bool waterbomb_trigger();
+    bool waterbomb_trigger(int,int);
     int waterbomb_pos_x;
     int waterbomb_pos_y;
     int waterbomb_start;
     int waterbomb_center_x;
     int waterbomb_center_y;
-    int range;
+    int range = 100 ;//
     int cd_time;
     int explore;
     int set_time;
@@ -53,7 +53,7 @@ private:
     int width,height;
     
     ALLEGRO_BITMAP *player_img[12];
-    ALLEGRO_BITMAP *waterbomb_img[3];
+    ALLEGRO_BITMAP *waterbomb_img[4];
     ALLEGRO_EVENT player_event;
     ALLEGRO_TIMER *player_timer = NULL;
     int OPERATION_UP;
