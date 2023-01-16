@@ -33,20 +33,14 @@ Menu::process(ALLEGRO_EVENT event)
             case ALLEGRO_KEY_ESCAPE:
                 printf("press ESC in menu process\n");
                 return GAME_EXIT;
-            case ALLEGRO_KEY_1:
-                printf("press 1\n");
+            case ALLEGRO_KEY_F1:
+                printf("press F1\n");
                 next_window = true;
                 select_capture = 1;
                 al_play_sample_instance(click_sound);
                 break;
-            case ALLEGRO_KEY_2:
-                printf("press 2\n");
-                next_window = true;
-                select_classic = 1;
-                al_play_sample_instance(click_sound);
-                break;
-            case ALLEGRO_KEY_3:
-                printf("press 3\n");
+            case ALLEGRO_KEY_F2:
+                printf("press F2\n");
                 next_window = true;
                 select_deathmatch = 1;
                 al_play_sample_instance(click_sound);

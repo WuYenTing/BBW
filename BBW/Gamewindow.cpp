@@ -196,7 +196,7 @@ Gamewindow::process_event()
     
     if(window == MENU){
         error = menu.process(event);
-        if(error == CAPTURE || error == CLASSIC || error == DEATHMATCH ){
+        if(error == CAPTURE ||error == DEATHMATCH ){
             draw = true;
         }
     }else if (window == SELECT_CHARATER){
@@ -207,15 +207,9 @@ Gamewindow::process_event()
         
         p1 ->player_process(event,timer);
         p2 ->player_process(event,timer);
-        draw = true;
          
         
-    }else if(window == CLASSIC_MAP){
-        
-        p1 ->player_process(event,timer);
-        p2 ->player_process(event,timer);
-        
-    }else if(window == DEATHMATCH){
+    }else if(window == DEATHMATCH_MAP){
         
         p1 ->player_process(event,timer);
         p2 ->player_process(event,timer);

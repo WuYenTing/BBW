@@ -4,10 +4,9 @@
 #define MENU 0
 #define SELECT_CHARATER 1
 #define CAPTURE_MAP 2
-#define CLASSIC_MAP 3
-#define DEATHMATCH_MAP 4
-#define WIN 5
-#define LOSE 6
+#define DEATHMATCH_MAP 3
+#define PLAYER1_WIN 4
+#define PLAYER2_LOSE 5
 class Scence
 {
 public:

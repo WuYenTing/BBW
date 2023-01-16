@@ -28,9 +28,8 @@
 #define GAME_TERMINATE 5
 #define GAME_NEXT_LEVEL 6
 #define GAME_EXIT 7
-#define CLASSIC 8
-#define CAPTURE 9
-#define DEATHMATCH 10
+#define CAPTURE 8
+#define DEATHMATCH 9
 #define PLAYER_1 11
 #define PLAYER_2 12
 
@@ -39,5 +38,16 @@ extern int window;
 extern bool mode_next_window;
 extern int mode_window;
 extern bool esc;
-extern int select_classic, select_capture, select_deathmatch;
+extern int select_capture, select_deathmatch;
 extern bool key_state[ALLEGRO_KEY_MAX];
+
+extern bool p1_boxinggloves_trigger;
+extern bool p2_boxinggloves_trigger;
+extern bool p3_boxinggloves_trigger;
+extern bool p4_boxinggloves_trigger;
+
+extern int max_speed;
+extern int min_speed;
+
+extern int add_life;
+extern int minus_life;

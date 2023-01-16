@@ -1,4 +1,5 @@
 #include "Lightning.h"
+//minus life
 Lightning::Lightning(int x,int y)
 {
     this->circle = new Circle(x, y, 70);
@@ -83,21 +84,25 @@ Lightning::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
+        p1->life -= minus_life;
         printf("lightning trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
+        p2->life -= minus_life;
         printf("lightning trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
+        p3->life -= minus_life;
         printf("lightning trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
+        p4->life -= minus_life;
         printf("lightning trigger check 4\n");
         return true;
     }

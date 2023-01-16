@@ -83,21 +83,25 @@ Boxinggloves::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
+        p1_boxinggloves_trigger = true;
         printf("boxinggloves trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
+        p2_boxinggloves_trigger = true;
         printf("boxinggloves trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
+        p3_boxinggloves_trigger = true;
         printf("boxinggloves trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
+        p4_boxinggloves_trigger = true;
         printf("boxinggloves trigger check 4\n");
         return true;
     }

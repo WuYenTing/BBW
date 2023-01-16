@@ -1,4 +1,5 @@
 #include "Magicdrink.h"
+//add life
 Magicdrink::Magicdrink(int x, int y)
 {
     this->circle = new Circle(x, y, 70);
@@ -84,21 +85,25 @@ Magicdrink::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
+        p1->life += add_life;
         printf("magicdrink trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
+        p2->life += add_life;
         printf("magicdrink trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
+        p3->life += add_life;
         printf("magicdrink trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
+        p4->life += add_life;
         printf("magicdrink trigger check 4\n");
         return true;
     }
