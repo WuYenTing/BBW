@@ -23,7 +23,7 @@ public:
     void create_waterbomb(int ,int );
     
     int pos_x,pos_y;
-    int life;
+    float life;
     int speed;
     int anime ;
     int anime_time;
@@ -33,7 +33,7 @@ public:
     void create_waterbomb();
     void Draw_waterbomb();
     void waterbomb_init();
-    void waterbomb_update();
+    void waterbomb_update(int,int);
     bool waterbomb_trigger(int,int);
     int waterbomb_pos_x;
     int waterbomb_pos_y;

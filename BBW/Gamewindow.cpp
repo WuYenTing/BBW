@@ -124,7 +124,7 @@ Gamewindow::game_draw(){
         p1->Draw_waterbomb();
         p2->Draw();
         p2->Draw_waterbomb();
-        it->Draw();
+        //it->Draw();
         cr->Draw();
         bx->Draw();
          
@@ -132,7 +132,7 @@ Gamewindow::game_draw(){
         mk->Draw();
         li->Draw();
         sh->Draw();
-        ob->Draw();
+        //ob->Draw();
     }
     al_flip_display();
 }
@@ -165,24 +165,32 @@ Gamewindow::game_update()
         p2->player_init(I,K,J,L,M,2);
         p2->waterbomb_init();
         cr->cross_init(p1, p2, p3, p4);
-        it->item_init(p1, p2, p3, p4);
+        //it->item_init(p1, p2, p3, p4);
         bx->boxinggloves_init(p1, p2, p3, p4);
             
         mg->maxdrug_init(p1, p2, p3, p4);
         mk->magicdrink_init(p1, p2, p3, p4);
         li->lightning_init(p1, p2, p3, p4);
         sh->shield_init(p1, p2, p3, p4);
-        ob->obstacle_init(p1, p2, p3, p4);
+        //ob->obstacle_init(p1, p2, p3, p4);
          
         next_window = false;
         
     }else if(window == CAPTURE_MAP /*|| window == DEATHMATCH_MAP*/){
         
         p1->player_update();
-        p1->waterbomb_update();
+        p1->waterbomb_update(p2->getX(),p2->getY());
+        if(p1->waterbomb_trigger(p2->getX(),p2->getY())){
+            (p2->life)=(p2->life)-(0.1);
+            printf("p2 life %f\n",p2->life);
+        }
         p2->player_update();
-        p2->waterbomb_update();
-        it->item_update();
+        p2->waterbomb_update(p1->getX(),p1->getY());
+        if(p2->waterbomb_trigger(p1->getX(),p1->getY())){
+            (p1->life)=(p1->life)-(0.1);
+            printf("p1 life %f\n",p1->life);
+        }
+        //it->item_update();
         cr->cross_update();
         bx->boxinggloves_update();
            
@@ -190,7 +198,7 @@ Gamewindow::game_update()
         mk->magicdrink_update();
         li->lightning_update();
         sh->shield_update();
-        ob->obstacle_update();
+        //ob->obstacle_update();
          
     }
     

@@ -78,9 +78,9 @@ public:
     Shield* create_shield();
     Shield* sh = create_shield();
     Item* create_item();
-    Item* it = create_item();
+    //Item* it = create_item();
     Obstacle* create_obstacle(int x=0,int y=0,int t=0);
-    Obstacle* ob = create_obstacle(1200,1200,2);
+    //Obstacle* ob = create_obstacle(1200,1200,2);
     std::vector<Obstacle*> wallset;
     void create_wall();
     char W = 'W';

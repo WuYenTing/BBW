@@ -227,6 +227,18 @@ Player::player_update()
         player_state = STOP;
     }
     //this->circle = new Circle(pos_x, pos_y, 70);
+    if(pos_x>=1920){
+        pos_x=1920;
+    }
+    if(pos_x<=0){
+        pos_x=0;
+    }
+    if(pos_y<=40){
+        pos_y=40;
+    }
+    if(pos_y>=1400){
+        pos_y=1400;
+    }
     this->circle->x = pos_x;
     this->circle->y = pos_y;
     
@@ -266,7 +278,7 @@ Player::waterbomb_init()
 
 
 void
-Player::waterbomb_update()
+Player::waterbomb_update(int x,int y)
 {
     //anime++;
     printf("waterbomb animetime%d\n" ,anime_time);
@@ -279,10 +291,10 @@ Player::waterbomb_update()
         }
     }
     //if(set_time  )
-    if(waterbomb_trigger(5, 10)){
+    if(waterbomb_trigger(x,y)){
         printf("waterbomb update item trigger\n");
-        waterbomb_pos_x = -500;
-        waterbomb_pos_y = -500;
+        //waterbomb_pos_x = -500;
+        //waterbomb_pos_y = -500;
     }
     else{
         printf("waterbomb update item not trigger\n");
@@ -335,13 +347,12 @@ Player::Draw_waterbomb()
 
 bool
 Player::waterbomb_trigger(int x,int y){
-    int right_area_x = waterbomb_pos_x + range +75;
-    int left_area_x = waterbomb_pos_x + range;
-    int up_area_y = waterbomb_pos_y + range;
-    int down_area_y = waterbomb_pos_y - range - 75;
     if(set_time >= 120 && set_time <= 210){
-        return false;
-    }
+            if(((waterbomb_pos_x-range-80<=x && x<= waterbomb_pos_x+range) && (waterbomb_pos_y-100 && y<=waterbomb_pos_y+100)) ||
+                   ((waterbomb_pos_x-80<=x && x<=waterbomb_pos_x+75) && (waterbomb_pos_y-range-100<=y && y<=waterbomb_pos_y+range))){
+                    return true;
+                }
+        }
     //if(x+70>=waterbomb_pos_x)
     return false;
 }
