@@ -141,7 +141,7 @@ Gamewindow::game_update()
 {
     printf("game update\n");
     if(next_window && window == MENU){
-        printf("next window\n");
+        //printf("next window\n");
         menu.destroy();
         select_character.init();
         next_window = false;
@@ -149,7 +149,15 @@ Gamewindow::game_update()
        
     }else if(next_window && window == SELECT_CHARATER){
         select_character.destroy();
-        capture_map.init();
+        //if(select_capture == 1){
+            capture_map.init();
+            //select_capture = -1;
+            window = CAPTURE_MAP;
+        //}else if(select_deathmatch == 1){
+            //deathmatch_map.init();
+            //select_deathmatch = -1;
+            //window = DEATHMATCH_MAP;
+        //}
         
         p1->player_init(W,S,A,D,X,1);
         p2->player_init(I,K,J,L,M,2);
@@ -165,8 +173,8 @@ Gamewindow::game_update()
         ob->obstacle_init(p1, p2, p3, p4);
          
         next_window = false;
-        window = CAPTURE_MAP;
-    }else if(window == CAPTURE_MAP){
+        
+    }else if(window == CAPTURE_MAP /*|| window == DEATHMATCH_MAP*/){
         
         p1->player_update();
         p2->player_update();
@@ -182,6 +190,33 @@ Gamewindow::game_update()
         ob->obstacle_update();
          
     }
+    
+    if(next_window && window == PLAYER1_WIN){
+        //if(select_capture){
+            capture_map.destroy();
+        //}else if(select_deathmatch){
+            //deathmatch_map.destroy();
+        //}
+        player1_win.init();
+        next_window = false;
+        
+    }else if (next_window && window == PLAYER2_WIN){
+        //if(select_capture){
+            capture_map.destroy();
+        /*}else if(select_deathmatch){
+            deathmatch_map.destroy();
+        }*/
+        player2_win.init();
+        next_window = false;
+    }else if (next_window && window == PLAYER_TIE){
+        //if(select_capture){
+            capture_map.destroy();
+        /*}else if(select_deathmatch){
+            deathmatch_map.destroy();
+        }*/
+        player_tie.init();
+        next_window = false;
+    }
 
 }
 
@@ -196,9 +231,10 @@ Gamewindow::process_event()
     
     if(window == MENU){
         error = menu.process(event);
-        if(error == CAPTURE ||error == DEATHMATCH ){
+        if(error == CAPTURE /*||error == DEATHMATCH */){
             draw = true;
         }
+        if(error == GAME_EXIT) return GAME_EXIT;
     }else if (window == SELECT_CHARATER){
         error = select_character.process(event);
         draw = true;
@@ -207,12 +243,24 @@ Gamewindow::process_event()
         
         p1 ->player_process(event,timer);
         p2 ->player_process(event,timer);
+        //trigger
+        //if(game_time == 0 && p1.life > p2.life)
+        
+        /*}else if(window == DEATHMATCH_MAP){
          
+         p1 ->player_process(event,timer);
+         p2 ->player_process(event,timer);
+         }*/
+    }else if (window == PLAYER1_WIN){
+        error = player1_win.process(event);
+        if(error == GAME_EXIT) return GAME_EXIT;
         
-    }else if(window == DEATHMATCH_MAP){
-        
-        p1 ->player_process(event,timer);
-        p2 ->player_process(event,timer);
+    }else if (window == PLAYER2_WIN){
+        error = player2_win.process(event);
+        if(error == GAME_EXIT) return GAME_EXIT;
+    }else if (window == PLAYER_TIE){
+        error = player_tie.process(event);
+        if(error == GAME_EXIT)return  GAME_EXIT;
     }
     
     if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE || event.type == ALLEGRO_KEY_ESCAPE){
@@ -250,6 +298,9 @@ Gamewindow::game_destroy()
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
     al_destroy_bitmap(icon);
+    player1_win.destroy();
+    player_tie.destroy();
+    player2_win.destroy();
      //for testing
     
 }

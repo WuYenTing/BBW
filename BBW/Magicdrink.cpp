@@ -85,25 +85,33 @@ Magicdrink::trigger()
     //this->circle;
     if (Circle::isOverlap(this->circle, p1->getCircle()))
     {
-        p1->life += add_life;
+        if(p1->life <= 100 - add_life)
+            p1->life += add_life;
+        else p1->life = 100;
         printf("magicdrink trigger check 1\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p2->getCircle()))
     {
-        p2->life += add_life;
+        if(p2->life <= 100 - add_life)
+            p2->life += add_life;
+        else p2->life = 100;
         printf("magicdrink trigger check 2\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p3->getCircle()))
     {
-        p3->life += add_life;
+        if(p3->life <= 100 - add_life)
+            p3->life += add_life;
+        else p3->life = 100;
         printf("magicdrink trigger check 3\n");
         return true;
     }
     else if (Circle::isOverlap(this->circle, p4->getCircle()))
     {
-        p4->life += add_life;
+        if(p4->life <= 100 - add_life)
+            p4->life += add_life;
+        else p4->life = 100;
         printf("magicdrink trigger check 4\n");
         return true;
     }

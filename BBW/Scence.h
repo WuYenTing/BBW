@@ -6,7 +6,8 @@
 #define CAPTURE_MAP 2
 #define DEATHMATCH_MAP 3
 #define PLAYER1_WIN 4
-#define PLAYER2_LOSE 5
+#define PLAYER2_WIN 5
+#define PLAYER_TIE 6
 class Scence
 {
 public:

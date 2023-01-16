@@ -1,15 +1,15 @@
-#include "Select_Character.h"
+#include "Player2_win.h"
 void
-Select_Character::init()
+Player2_win::init()
 {
-    printf("Select_Character init\n");
+    printf("player2 win init\n");
     al_init_primitives_addon();
     al_init_font_addon();
     al_init_ttf_addon();
     al_init_image_addon();
     al_init_acodec_addon();
     
-    picture = al_load_bitmap("./picture/scene/select_character.jpeg");
+    picture = al_load_bitmap("./picture/scene/scene_player2_win.jpeg");
     sample = al_load_sample("./sound/select_character.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
@@ -19,33 +19,35 @@ Select_Character::init()
 }
 
 int
-Select_Character::process(ALLEGRO_EVENT event)
+Player2_win::process(ALLEGRO_EVENT event)
 {
-    printf("select_character_process\n");
+    printf("player2 win_process\n");
     if(event.type == ALLEGRO_EVENT_KEY_UP){
         switch (event.keyboard.keycode) {
             case ALLEGRO_KEY_ESCAPE:
-                printf("press ESC in select process\n");
+                printf("press ESC\n");
                 return GAME_EXIT;
             case ALLEGRO_KEY_ENTER:
                 printf("press ENTER\n");
                 next_window = true;
                 //return PLAYER_1;
+                break;
+           
         }
     }
     return GAME_CONTINUE;
 }
 
 void
-Select_Character::draw()
+Player2_win::draw()
 {
     al_draw_bitmap(picture, 0, 0, 0);
-    printf("draw select_character\n");
+    printf("draw player2 win\n");
 }
 void
-Select_Character::destroy()
+Player2_win::destroy()
 {
-    printf("destroy Select_Character\n");
+    printf("destroy player2 win\n");
     al_destroy_bitmap(picture);
     al_destroy_sample_instance(background_sound);
 }
