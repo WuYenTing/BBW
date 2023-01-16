@@ -62,7 +62,6 @@
 		4B4193C2297522C100CDEA0C /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4193BB297522C100CDEA0C /* explosion.png */; };
 		4B4193C4297524A800CDEA0C /* Shield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C3297524A800CDEA0C /* Shield.cpp */; };
 		4B4193C72975290800CDEA0C /* Capture_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193C62975290800CDEA0C /* Capture_map.cpp */; };
-		4B4193CF29756D6800CDEA0C /* BBW in Resources */ = {isa = PBXBuildFile; fileRef = 4B4193CE29756D6800CDEA0C /* BBW */; };
 		4B4193D229756D8C00CDEA0C /* Player2_win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193D029756D8C00CDEA0C /* Player2_win.cpp */; };
 		4B4193D529756E1C00CDEA0C /* Player_tie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193D329756E1C00CDEA0C /* Player_tie.cpp */; };
 		4B4193DC29759B4B00CDEA0C /* Player1_win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193DA29759B4B00CDEA0C /* Player1_win.cpp */; };
@@ -180,7 +179,6 @@
 		4B4193C5297528EC00CDEA0C /* Capture_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture_map.h; sourceTree = "<group>"; };
 		4B4193C62975290800CDEA0C /* Capture_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Capture_map.cpp; sourceTree = "<group>"; };
 		4B4193CC29756B5B00CDEA0C /* Player1_win.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player1_win.h; sourceTree = "<group>"; };
-		4B4193CE29756D6800CDEA0C /* BBW */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BBW; sourceTree = "<group>"; };
 		4B4193D029756D8C00CDEA0C /* Player2_win.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player2_win.cpp; sourceTree = "<group>"; };
 		4B4193D129756D8C00CDEA0C /* Player2_win.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player2_win.h; sourceTree = "<group>"; };
 		4B4193D329756E1C00CDEA0C /* Player_tie.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player_tie.cpp; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
 				3E8980172964AD0300AEBABF /* Assets.xcassets */,
-				4B4193CE29756D6800CDEA0C /* BBW */,
 				3E8980152964AB6A00AEBABF /* BBW.entitlements */,
 				3E898005296497B600AEBABF /* bitmap.cpp */,
 				4B4193B5297522C100CDEA0C /* Boxinggloves.cpp */,
@@ -440,7 +437,6 @@
 				3E8980222964B30A00AEBABF /* Main.storyboard in Resources */,
 				4B4193C2297522C100CDEA0C /* explosion.png in Resources */,
 				3E75FE0A297196BF00D4AC63 /* picture in Resources */,
-				4B4193CF29756D6800CDEA0C /* BBW in Resources */,
 				3E8980192964AD0300AEBABF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
