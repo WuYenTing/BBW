@@ -10,7 +10,7 @@ Player2_win::init()
     al_init_acodec_addon();
     
     picture = al_load_bitmap("./picture/scene/scene_player2_win.jpeg");
-    sample = al_load_sample("./sound/select_character.wav");//background music
+    sample = al_load_sample("./sound/sound_game_succeed.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());

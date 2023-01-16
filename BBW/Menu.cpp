@@ -19,8 +19,8 @@ Menu::init()
     al_restore_default_mixer();
     al_attach_sample_instance_to_mixer(background_sound, al_get_default_mixer());
     al_attach_sample_instance_to_mixer(click_sound, al_get_default_mixer());
-    al_set_sample_instance_gain(click_sound, 2);
-    al_set_sample_instance_gain(background_sound, 1);
+    al_set_sample_instance_gain(click_sound, 5);
+    al_set_sample_instance_gain(background_sound, 0.3);
     al_play_sample_instance(background_sound);
 }
 
