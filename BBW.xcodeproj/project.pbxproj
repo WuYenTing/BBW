@@ -56,6 +56,7 @@
 		3E89808E2964BAEE00AEBABF /* liballegro_font.5.2.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; };
 		3E89808F2964BAF000AEBABF /* liballegro_font.5.2.9.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3E8980752964BAD300AEBABF /* liballegro_font.5.2.9.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3EE763132965AF1E003BF29A /* Mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE763122965AF1E003BF29A /* Mode.cpp */; };
+		4B4193B42973F40E00CDEA0C /* Select_Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B4193B22973F40E00CDEA0C /* Select_Character.cpp */; };
 		4B7EE1692965ACD50099BD7B /* sound in Resources */ = {isa = PBXBuildFile; fileRef = 4B7EE1682965ACD50099BD7B /* sound */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,8 @@
 		3EE762FD296590F4003BF29A /* Mode_capture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_capture.h; sourceTree = "<group>"; };
 		3EE762FF29659126003BF29A /* Mode_deathmatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode_deathmatch.h; sourceTree = "<group>"; };
 		3EE763122965AF1E003BF29A /* Mode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mode.cpp; sourceTree = "<group>"; };
+		4B4193B22973F40E00CDEA0C /* Select_Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Select_Character.cpp; sourceTree = "<group>"; };
+		4B4193B32973F40E00CDEA0C /* Select_Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Select_Character.h; sourceTree = "<group>"; };
 		4B7EE1682965ACD50099BD7B /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +278,8 @@
 				4B7EE1682965ACD50099BD7B /* sound */,
 				3E897FD929648C4400AEBABF /* Waterbomb.h */,
 				3EE763122965AF1E003BF29A /* Mode.cpp */,
+				4B4193B22973F40E00CDEA0C /* Select_Character.cpp */,
+				4B4193B32973F40E00CDEA0C /* Select_Character.h */,
 			);
 			path = BBW;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
 				3E898012296497B700AEBABF /* Mode_deathmatch.cpp in Sources */,
 				3E897FE729648C4800AEBABF /* global.cpp in Sources */,
+				4B4193B42973F40E00CDEA0C /* Select_Character.cpp in Sources */,
 				3E898013296497B700AEBABF /* algif.cpp in Sources */,
 				3E897FE629648C4800AEBABF /* Main.cpp in Sources */,
 				3E89800E296497B700AEBABF /* Mode_classic.cpp in Sources */,

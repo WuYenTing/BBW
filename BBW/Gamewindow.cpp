@@ -49,6 +49,7 @@ Gamewindow::game_init()
 {
     icon = al_load_bitmap("./picture/explosion.png");
     al_set_display_icon(display, icon);
+    
     //sample = al_load_sample("");//click sound
     //click_sound = al_create_sample_instance(sample);
     
@@ -65,7 +66,7 @@ Gamewindow::game_play()
 {
     printf("game play\n");
     int msg;
-    srand(time(NULL));
+    //srand(time(NULL));
     
     
     msg = -1;
@@ -74,7 +75,11 @@ Gamewindow::game_play()
     
     while (msg != GAME_EXIT)
     {
-        msg = mode_select();
+        msg = game_run();
+        if(msg == GAME_EXIT /*|| msg == CLASSIC || msg == CAPTURE || msg == DEATHMATCH* only for testing*/){
+            printf("Game over\n");
+            //msg = GAME_EXIT;
+        }
     }
     
     show_err_msg(msg);
@@ -90,9 +95,9 @@ Gamewindow::game_begin()
     
 }
 
-int Gamewindow::mode_select()
+int Gamewindow::game_run()
 {
-    printf("mode select\n");
+    printf("game_run\n");
     int error = GAME_CONTINUE;
     if(draw){
         game_draw();
@@ -110,6 +115,8 @@ Gamewindow::game_draw(){
     printf("game draw\n");
     if(window == 0){
         menu.draw();
+    }else if(window == 1){
+        select_character.draw();
     }
     al_flip_display();
 }
@@ -118,8 +125,16 @@ void
 Gamewindow::game_update()
 {
     printf("game update\n");
-    if(next_window && window == 0){
-        menu.~Menu();
+    if(next_window && window == MENU){
+        printf("next window\n");
+        menu.destroy();
+        select_character.init();
+        next_window = false;
+        window = 1;
+       
+    }else if(next_window && window == SELECT_CHARATER){
+        //
+        
     }
 
 }
@@ -133,7 +148,7 @@ Gamewindow::show_err_msg(int msg)
     }
     else
     {
-        fprintf(stderr, "unexpected msg: %d", msg);
+        fprintf(stderr, "unexpected msg: %d\n", msg);
     }
     game_destroy();
     exit(9);
@@ -141,10 +156,12 @@ Gamewindow::show_err_msg(int msg)
 void
 Gamewindow::game_destroy()
 {
+    printf("Game destroy\n");
     al_destroy_display(display);
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
     al_destroy_bitmap(icon);
+     //for testing
     
 }
 
@@ -156,13 +173,25 @@ Gamewindow::process_event()
     ALLEGRO_EVENT event;
     al_wait_for_event(event_queue, &event);
     printf("process event\n");
-    if(window == 0){
+    
+    if(window == MENU){
         error = menu.process(event);
+        if(error == CAPTURE || error == CLASSIC || error == DEATHMATCH ){
+            draw = true;
+        }
+    }else if (window == SELECT_CHARATER){
+        error = select_character.process(event);
+    }else if(window == CAPTURE_MAP){
+        
+    }else if(window == CLASSIC_MAP){
+        
+    }else if(window == DEATHMATCH){
+        
     }
     
     if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
         printf("ESC\n");
-        return GAME_EXIT;
+        error = GAME_EXIT;
     }else if(event.type == ALLEGRO_EVENT_TIMER){
         if(event.timer.source == timer)
             printf("timer\n");
@@ -170,7 +199,7 @@ Gamewindow::process_event()
     }
     if(draw) game_update();
     //printf("GAME_CONTINUE\n");
-    return GAME_CONTINUE;
+    return error;
 }
 
 // detect if mouse hovers over a rectangle

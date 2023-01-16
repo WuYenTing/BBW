@@ -1,22 +1,24 @@
-#ifndef Mode_capture_h
-#define Mode_capture_h
-
+#ifndef Mode_deathmatch_h
+#define Mode_deathmatch_h
 
 #include "Mode.h"
 #include "Player.h"
 #include "Item.h"
 
 const float FPS_deathmatch = 60;
-class Mode_deathmatch : public Mode
+class Mode_deathmatch
 {
 public:
     Mode_deathmatch();
     
     void Mode_init();
     void Mode_reset();
+    void Mode_play();
+    void Mode_begin();
+    void Mode_draw();
     
     int Mode_run();
-    int Mode_update();
+    void Mode_update();
 
     void show_err_msg(int msg);
     void Mode_destroy();
@@ -32,9 +34,13 @@ public:
     Item* create_item();
     
     ~Mode_deathmatch();
+    
+    bool initial = true;
 private:
+    ALLEGRO_BITMAP *icon;
+    ALLEGRO_BITMAP *deathmatch_choose_character = NULL;
     ALLEGRO_BITMAP *deathmatch_map = NULL;
-    ALLEGRO_DISPLAY* deathmatch_display = NULL;
+    
     
     ALLEGRO_EVENT_QUEUE *deathmatch_event_queue = NULL;
     ALLEGRO_EVENT deathmatch_event;
@@ -49,4 +55,4 @@ private:
         
 };
 
-#endif  /*Mode_capture_h*/
+#endif  Mode_deathmatch_h

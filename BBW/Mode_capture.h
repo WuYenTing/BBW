@@ -6,28 +6,43 @@
 #include "Player.h"
 #include "Item.h"
 #include "global.h"
+#include "Select_Character.h"
 
 const float FPS_capture = 60;
-class Mode_capture : public Mode
+class Mode_capture
 {
 public:
+    enum item_list {WATERBOMB, MAXDRUG, LIGHTNING, CROSS, SHIELD, BOXGLOVING};
     Mode_capture();
     
     void Mode_init();
     void Mode_reset();
     void Mode_play();
     void Mode_draw();
+    void Mode_begin();
     
     int Mode_run();
-    int Mode_update();
+    void Mode_update(int );
 
-    void show_err_msg(int msg);
-    void Mode_destroy();
+    void show_err_msg(int msg){
+        if (!al_init())
+        {
+            fprintf(stderr, "Capture Terinamted...");
+        }
+        else
+        {
+            fprintf(stderr, "unexpected msg: %d\n", msg);
+        }
+        Mode_destroy();
+        exit(9);
+    }
+    //void Mode_destroy();
 
     // each drawing scene function
     void draw_Mode_map();
     void draw_Mode_item();
-
+    
+    void Mode_destroy();
     // process of updated event
     int Mode_process_event();
     
@@ -36,20 +51,20 @@ public:
     
     ~Mode_capture();
 private:
-    ALLEGRO_BITMAP *capture_map = NULL;
+    bool initial = true;
+    
+    ALLEGRO_BITMAP *icon;
     ALLEGRO_DISPLAY* capture_display = NULL;
     
     ALLEGRO_EVENT_QUEUE *capture_event_queue = NULL;
     ALLEGRO_EVENT capture_event;
     
     ALLEGRO_TIMER *capture_timer = NULL;
+    Select_Character select_character;
     
-    ALLEGRO_SAMPLE *capture_sample = NULL;
-    ALLEGRO_SAMPLE_INSTANCE *capture_startSound = NULL;
-    ALLEGRO_SAMPLE_INSTANCE *capture_clearSound = NULL;
-    ALLEGRO_SAMPLE_INSTANCE *capture_failSound = NULL;
-    ALLEGRO_SAMPLE_INSTANCE *capture_background_sound = NULL;
+    bool draw = true;
         
 };
 
 #endif  /*Mode_capture_h*/
+

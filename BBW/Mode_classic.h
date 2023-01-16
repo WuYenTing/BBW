@@ -7,7 +7,7 @@
 
 const float FPS_classic = 60;
 
-class Mode_classic : public Mode
+class Mode_classic
 {
 public:
     Mode_classic();
@@ -16,7 +16,7 @@ public:
     void Mode_reset();
     
     int Mode_run();
-    int Mode_update();
+    void Mode_update();
 
     void show_err_msg(int msg);
     void Mode_destroy();
@@ -46,4 +46,4 @@ private:
     ALLEGRO_SAMPLE_INSTANCE *classic_failSound = NULL;
     ALLEGRO_SAMPLE_INSTANCE *classic_background_sound = NULL;
 };
-#endif  /*Mode_classic_h*/
+#endif  Mode_classic_h

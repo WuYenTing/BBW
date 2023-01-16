@@ -1,16 +1,16 @@
-#include "Menu.h"
+#include "Select_Character.h"
 void
-Menu::init()
+Select_Character::init()
 {
-    printf("init menu\n");
+    printf("Select_Character init\n");
     al_init_primitives_addon();
     al_init_font_addon();
     al_init_ttf_addon();
     al_init_image_addon();
     al_init_acodec_addon();
     
-    menu = al_load_bitmap("./picture/menu.jpeg");
-    sample = al_load_sample("./sound/background_sound.wav");//background music
+    picture = al_load_bitmap("./picture/startmenu_test.jpg");
+    sample = al_load_sample("./sound/select_character.wav");//background music
     background_sound = al_create_sample_instance(sample);
     al_set_sample_instance_playmode(background_sound, ALLEGRO_PLAYMODE_LOOP);
     al_restore_default_mixer();
@@ -20,28 +20,23 @@ Menu::init()
 }
 
 int
-Menu::process(ALLEGRO_EVENT event)
+Select_Character::process(ALLEGRO_EVENT event)
 {
-    printf("menu_process\n");
+    printf("select_character_process\n");
     if(event.type == ALLEGRO_EVENT_KEY_UP){
         switch (event.keyboard.keycode) {
             case ALLEGRO_KEY_ESCAPE:
-                printf("press ESC in menu process\n");
+                printf("press ESC in select process\n");
                 return GAME_EXIT;
             case ALLEGRO_KEY_1:
                 printf("press 1\n");
                 next_window = true;
-                select_capture = 1;
+                return PLAYER_1;
                 break;
             case ALLEGRO_KEY_2:
                 printf("press 2\n");
                 next_window = true;
-                select_classic = 1;
-                break;
-            case ALLEGRO_KEY_3:
-                printf("press 3\n");
-                next_window = true;
-                select_deathmatch = 1;
+                return PLAYER_2;
                 break;
         }
     }
@@ -49,15 +44,15 @@ Menu::process(ALLEGRO_EVENT event)
 }
 
 void
-Menu::draw()
+Select_Character::draw()
 {
-    al_draw_bitmap(menu, 0, 0, 0);
-    printf("draw menu\n");
+    al_draw_bitmap(picture, 0, 0, 0);
+    printf("draw select_character\n");
 }
 void
-Menu::destroy()
+Select_Character::destroy()
 {
-    printf("destroy menu\n");
-    al_destroy_bitmap(menu);
+    printf("destroy Select_Character\n");
+    al_destroy_bitmap(picture);
     al_destroy_sample_instance(background_sound);
 }

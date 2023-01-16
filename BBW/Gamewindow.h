@@ -8,10 +8,11 @@
 #include "Obstacle.h"
 #include "Player.h"
 #include "Scence.h"
-#include "Mode.h"
-#include "Mode_capture.h"
-#include "Mode_classic.h"
-#include "Mode_deathmatch.h"
+#include "Select_Character.h"
+//#include "Mode.h"
+//#include "Mode_capture.h"
+//#include "Mode_classic.h"
+//#include "Mode_deathmatch.h"
 
 // clock rate
 const float FPS = 60;
@@ -29,9 +30,9 @@ public:
     void game_play();
     void game_begin();
     void game_draw();
-    int mode_select();
-
     int game_run();
+
+    //int game_run();
     void game_update();
 
     void show_err_msg(int msg);
@@ -62,11 +63,10 @@ private:
     ALLEGRO_TIMER *timer = NULL;
     
     Menu menu;
-    
+    Select_Character select_character;
 
     int select_mode = 0, c = 0;
     int mouse_x, mouse_y;
-    int select_classic = -1, select_capture = -1, select_deathmatch = -1;
     bool mute = false;
     bool draw = true;
     

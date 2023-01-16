@@ -31,8 +31,13 @@
 #define CLASSIC 8
 #define CAPTURE 9
 #define DEATHMATCH 10
+#define PLAYER_1 11
+#define PLAYER_2 12
 
 extern bool next_window;
 extern int window;
+extern bool mode_next_window;
+extern int mode_window;
 extern bool esc;
+extern int select_classic, select_capture, select_deathmatch;
 
