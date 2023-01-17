@@ -55,7 +55,7 @@ extern int max_speed;
 extern int min_speed;
 
 extern int add_life;
-extern int minus_life;
+extern float minus_life;
 
 extern bool p1_attack;
 extern int p1_attack_time;

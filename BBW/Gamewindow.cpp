@@ -115,6 +115,8 @@ Gamewindow::game_draw(){
     printf("game draw\n");
     if(window == MENU){
         menu.draw();
+    }else if(window == ITEM_INTRO ){
+        item_intro.draw();
     }else if(window == SELECT_CHARATER){
         select_character.draw();
     }else if(window == CAPTURE_MAP){
@@ -151,6 +153,11 @@ Gamewindow::game_update()
     if(next_window && window == MENU){
         //printf("next window\n");
         menu.destroy();
+        item_intro.init();
+        next_window = false;
+        window = ITEM_INTRO;
+    }else if(next_window && window == ITEM_INTRO){
+        item_intro.destroy();
         select_character.init();
         next_window = false;
         window = SELECT_CHARATER;
@@ -273,7 +280,10 @@ Gamewindow::process_event()
             draw = true;
         }
         if(error == GAME_EXIT) return GAME_EXIT;
-    }else if (window == SELECT_CHARATER){
+    }else if(window == ITEM_INTRO){
+        error = item_intro.process(event);
+    }
+    else if (window == SELECT_CHARATER){
         error = select_character.process(event);
         draw = true;
         
@@ -284,14 +294,14 @@ Gamewindow::process_event()
         
     }else if (window == PLAYER1_WIN){
         error = player1_win.process(event);
-        if(error == GAME_EXIT) return GAME_EXIT;
+        if(error == GAME_EXIT || next_window) return GAME_EXIT;
         
     }else if (window == PLAYER2_WIN){
         error = player2_win.process(event);
-        if(error == GAME_EXIT) return GAME_EXIT;
+        if(error == GAME_EXIT|| next_window) return GAME_EXIT;
     }else if (window == PLAYER_TIE){
         error = player_tie.process(event);
-        if(error == GAME_EXIT)return  GAME_EXIT;
+        if(error == GAME_EXIT|| next_window)return  GAME_EXIT;
     }
     
     if( event.type == ALLEGRO_EVENT_DISPLAY_CLOSE || event.type == ALLEGRO_KEY_ESCAPE){

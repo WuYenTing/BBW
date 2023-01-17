@@ -16,6 +16,7 @@
 #include "Player.h"
 #include "Scence.h"
 #include "Menu.h"
+#include "Item_intro.h"
 #include "Select_Character.h"
 #include "Capture_map.h"
 //#include "Deathmatch_map.h"
@@ -61,8 +62,8 @@ public:
     bool mouse_hover(int, int, int, int);
     ~Gamewindow();
     Player* create_player(int ,int);
-    Player* p1 = create_player(1614,150);
-    Player* p2 = create_player(416,1100);
+    Player* p1 = create_player(136,153);
+    Player* p2 = create_player(1680,156);
     Player* p3 = create_player(-101,-101);
     Player* p4 = create_player(-101,-101);
     Boxinggloves* create_boxinggloves();
@@ -111,6 +112,7 @@ private:
     
     
     Menu menu;
+    Item_intro item_intro;
     Select_Character select_character;
     Capture_map capture_map;
     //Deathmatch_map deathmatch_map;

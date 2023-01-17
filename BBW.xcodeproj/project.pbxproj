@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E70857F29762FF6009511F2 /* Item_intro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E70857E29762FF6009511F2 /* Item_intro.cpp */; };
 		3E75FE0A297196BF00D4AC63 /* picture in Resources */ = {isa = PBXBuildFile; fileRef = 3E75FE09297196BF00D4AC63 /* picture */; };
 		3E897FE629648C4800AEBABF /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FC629648C3900AEBABF /* Main.cpp */; };
 		3E897FE729648C4800AEBABF /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E897FC829648C3A00AEBABF /* global.cpp */; };
@@ -112,6 +113,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E70857D29762FF6009511F2 /* Item_intro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item_intro.h; sourceTree = "<group>"; };
+		3E70857E29762FF6009511F2 /* Item_intro.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item_intro.cpp; sourceTree = "<group>"; };
 		3E75FE09297196BF00D4AC63 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = picture; sourceTree = "<group>"; };
 		3E897F6B2964883B00AEBABF /* BBW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E897F802964883F00AEBABF /* BBWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +250,8 @@
 		3E897F6D2964883B00AEBABF /* BBW */ = {
 			isa = PBXGroup;
 			children = (
+				3E70857E29762FF6009511F2 /* Item_intro.cpp */,
+				3E70857D29762FF6009511F2 /* Item_intro.h */,
 				3E89800B296497B700AEBABF /* algif.cpp */,
 				3E89800C296497B700AEBABF /* algif.h */,
 				3E8980172964AD0300AEBABF /* Assets.xcassets */,
@@ -467,6 +472,7 @@
 				3E897FEE29648C4800AEBABF /* Player.cpp in Sources */,
 				4B4193DC29759B4B00CDEA0C /* Player1_win.cpp in Sources */,
 				3E897FED29648C4800AEBABF /* Circle.cpp in Sources */,
+				3E70857F29762FF6009511F2 /* Item_intro.cpp in Sources */,
 				4B4193C0297522C100CDEA0C /* Magicdrink.cpp in Sources */,
 				4B4193BC297522C100CDEA0C /* Boxinggloves.cpp in Sources */,
 				4B4193BF297522C100CDEA0C /* Cross.cpp in Sources */,
