@@ -36,7 +36,7 @@
 - For more information refer to [tutorial folder](https://github.com/yuan7122/I2P1_Final_project/tree/master/tutorial)
 
 ## Version
-- v1.0.0 2023/01/07
+- v1.0.0 2023/01/17
 
 ## Others
 - Open in your Xcode and execute the project.
