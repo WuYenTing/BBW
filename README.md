@@ -12,7 +12,7 @@
 - Collect shield <img width="36" alt="shield2" src="https://user-images.githubusercontent.com/106909192/213278619-ac4ca4ea-21fd-4858-9b85-7044dee95512.png">
  to protect the player from waterbombs attack.
 - Collect Boxinggloves <img width="36" alt="boxinggloves2" src="https://user-images.githubusercontent.com/106909192/213278421-51f22c9a-1f84-4f8c-9059-bf318299a92c.png">
- to protect the player from lighting and cross debuff.
+ to protect the player from lightning and cross debuff.
 - Collect the Magicdrink <img width="36" alt="magicdrink1" src="https://user-images.githubusercontent.com/106909192/213279817-0a9ff99d-192c-40c3-a00b-641dc723a44a.png">
  to heal the player.
 - Collect the Maxdrug <img width="36" alt="maxdrug2" src="https://user-images.githubusercontent.com/106909192/213278560-5d3a47fd-b35f-4ba3-a71a-b4efee9c34f1.png">
